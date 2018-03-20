@@ -96,7 +96,7 @@ nav ul {
 .desktop-nav li:not(:last-child) {
 	margin-right: 50px;
 }
-.desktop-nav li a {
+.desktop-nav > li > a {
 	color: var(--white);
 	text-decoration: none;
 	position: relative;
@@ -116,16 +116,12 @@ nav ul {
 .desktop-nav li a:hover::after {
 	transform: scaleX(1);
 }
-.dropdown-link li a {
-	position: relative;
-}
 .dropdown-menu {
 	margin-top: 15px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--white);
-	color: var(--dark-grey);
 	border-radius: 8px;
 	display: none;
 }
@@ -144,6 +140,11 @@ nav ul {
 .dropdown-menu li {
 	width: 100%;
 	padding: 8px 15px 8px 15px;
+}
+.dropdown-menu > li > a {
+	color: var(--grey-text);
+	text-decoration: none;
+	position: relative;
 }
 .dropdown-menu li:not(:last-child) {
 	border-bottom: 1px solid #ccc;
@@ -349,12 +350,11 @@ nav ul {
 }
 /*------ Sponsors -----*/
 .event-sponsors {
-	background-color: var(--light-grey);
 }
 
 /*------ FOOTER ------*/
 footer {
-	height: 250px;
+	width: 100%;
 	background-color: var(--dark-grey);
 }
 
