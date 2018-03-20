@@ -1,5 +1,5 @@
 const navLinks = document.querySelectorAll('.nav-link');
-const ctaLinks = document.querySelectorAll('.cta-button');
+const ctaLinks = document.querySelectorAll('.cta-button-nav');
 
 // Smooth Scroll
 function smoothScroll(e) {
