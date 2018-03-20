@@ -3,6 +3,7 @@
 	--grey-text: #525151;
 	--dark-blue: #2a4273;
 	--sky-blue: #0168b7;
+	--yellow-orange: #ffc238;
 }
 * {
   -webkit-font-smoothing: antialiased;
@@ -142,6 +143,11 @@ nav ul {
 	background: var(--sky-blue);
 /*	background-repeat: no-repeat;
 	background-size: cover;*/
+}
+
+/*------ Important Dates ----*/
+.event-schedule {
+	background-color: var(--yellow-orange);
 }
 
 /*------ Sponsors -----*/
