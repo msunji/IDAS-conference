@@ -1,6 +1,7 @@
 :root {
 	--white: #fff;
 	--grey-text: #525151;
+	--dark-grey: #212425;
 	--dark-blue: #2a4273;
 	--sky-blue: #0168b7;
 	--yellow-orange: #ffc238;
@@ -8,6 +9,8 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
 }
 body, html {
 	height: 100%;
@@ -27,6 +30,7 @@ h1 {
 	line-height: 55px;
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 10px;
+	margin-top: 0px;
 }
 h2 {
 	font-weight: 400;
@@ -43,7 +47,7 @@ section {
 .content {
 	width: 80%;
 	margin: 0 auto;
-	padding: 60px 0 60px;
+	padding: 90px 0 90px;
 }
 
 /*----- GRID ------*/
@@ -51,6 +55,7 @@ section {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 40px;
+	align-items: center;
 }
 
 /*---- Buttons ------*/
@@ -77,6 +82,34 @@ nav ul {
 	font-weight: 500;
 	margin: 0;
 	padding: 0;
+}
+.dropdown-menu {
+	margin-top: 10px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white);
+	color: var(--dark-grey);
+	border-radius: 8px;
+}
+.dropdown-menu::before {
+    content:"";
+    position: absolute;
+   	left: 11px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent var(--white) transparent;
+    z-index:9999;
+}
+.dropdown-menu li {
+	width: 100%;
+	padding: 8px 15px 8px 15px;
+}
+.dropdown-menu li:not(:last-child) {
+	border-bottom: 1px solid #ccc;
 }
 .desktop-nav {
 	font-size: 13px;
@@ -129,20 +162,79 @@ nav ul {
 }
 /*----- Event Info -----*/
 .event-description {
-	background: var(--white;)
+	background: var(--white);
 }
 .video-container {
 	display: flex;
 	justify-content: flex-end;
 }
 
-
 /*------ Event Date and Venue ----*/
 .event-date-venue {
-/*	background: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)), url('../assets/img/nccu-mainentrance.jpg');*/
-	background: var(--sky-blue);
-/*	background-repeat: no-repeat;
-	background-size: cover;*/
+	background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url('../assets/img/nccu-mainentrance.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: inset 0 19px 42px -6px rgba(45, 45, 45, 0.2);
+}
+
+/*------ Event Speakers -----*/
+.event-speakers {
+	background: var(--dark-grey);
+}
+.speakers-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(2, minmax(250px, 1fr));
+	grid-gap: 15px;
+	margin-top: 40px;
+}
+.speaker-info {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 200px 2fr;
+	height: 250px;
+	background-color: var(--white);
+}
+.speaker-photo {
+	background-color: var(--white);
+}
+.speaker-1 {
+	background: url('../assets/img/profile1.png');
+	background-size: cover;
+}
+.speaker-2 {
+	background: url('../assets/img/profile2.png');
+	background-size: cover;
+}
+.speaker-3 {
+	background: url('../assets/img/profile3.png');
+	background-size: cover;
+}
+.speaker-4 {
+	background: url('../assets/img/profile4.png');
+	background-size: cover;
+}
+.speaker-bio {
+	padding: 20px 30px 20px 0;
+	margin-left: 30px;
+	align-self: center;
+	max-height: inherit;
+}
+.speaker-bio h2 {
+	margin-top: 0px;
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	display: inline;
+}
+.speaker-bio h2::after {
+	content: '';
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: var(--yellow-orange);
 }
 
 /*------ Important Dates ----*/
@@ -150,6 +242,18 @@ nav ul {
 	background-color: var(--yellow-orange);
 }
 
+/*------ Call for Papers ----*/
+.call-for-papers > .content {
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: 1fr 40%;
+}
+.call-papers-image {
+	justify-self: flex-end;
+}
+.call-papers-image > img {
+	max-width: 100%;
+}
 /*------ Sponsors -----*/
 .event-sponsors {
 	background-color: #ebebeb;
