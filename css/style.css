@@ -1,4 +1,6 @@
 :root {
+	--white-text: #fff;
+	--grey-text: #2c2c2d;
 }
 body, html {
 	height: 100%;
@@ -7,6 +9,10 @@ body, p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	line-height: 22px;
+}
+/*----- Text --------*/
+.white-text {
+	color: var(--white-text);
 }
 h1 {
 	font-size: 45px;
@@ -17,24 +23,62 @@ section {
 }
 
 .content {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 60px 0 60px;
 }
 
-/*----- SECTIONS --------*/
-/*----- Event Summary ---*/
+/*----- GRID ------*/
+.two-column {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 40px;
+}
+
+
+/*----- NAVIGATION -------*/
 nav {
 	background-color: transparent;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 }
 nav ul {
+	display: flex;
 	list-style: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
 }
+.desktop-nav li:not(:last-child) {
+	margin-right: 50px;
+}
+
+/*----- SECTIONS --------*/
+/*----- Event Summary ---*/
 .event-summary {
+	display: flex;
 	height: 550px;
-	background-image: url('../assets/img/remi-yuan-taipei101.jpg');
-	background-repeat: none;
+	background-image: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
+	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: -70% 10%;
 }
-
+.event-summary > .content {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.event-details {
+	margin: auto;
+	text-align: center;
+}
+/*----- Event Info -----*/
+.event-description {
+	background: #1e1e1e;
+}
+.video-container {
+	display: flex;
+	justify-content: flex-end;
+}
