@@ -1,10 +1,12 @@
 :root {
 	--white: #fff;
 	--grey-text: #525151;
+	--light-grey: #ebebeb;
 	--dark-grey: #212425;
 	--dark-blue: #2a4273;
 	--sky-blue: #0168b7;
 	--yellow-orange: #ffc238;
+	--pink: #ee6352;
 }
 * {
   -webkit-font-smoothing: antialiased;
@@ -62,17 +64,15 @@ section {
 .cta-button {
 	text-decoration: none;
 	padding: 10px 30px 10px 30px;
-	background-color: #ee6352;
+	background-color: var(--pink);
 	color: white;
 	text-transform: uppercase;
+	transition: all 0.5s ease-in;
 }
-.cta-button::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	background: black;
+.cta-button:hover {
+	background-color: var(--white);
+	color: var(--pink);
 }
-
 /*----- NAVIGATION -------*/
 nav {
 	background-color: transparent;
@@ -192,6 +192,7 @@ nav ul {
 .detail-ctas a:first-of-type {
 	margin-right: 50px;
 }
+
 /*----- Event Info -----*/
 .event-description {
 	background: var(--white);
@@ -301,6 +302,14 @@ nav ul {
 	padding-top: 50px;
 	background: var(--white);
 }
+.event-timeline li:nth-last-child(2) {
+	padding-bottom: 50px;
+}
+.event-timeline li:last-child {
+	padding-top: 0;
+	background: transparent;
+}
+
 /*.event-timeline li::after {
 	content: '';
 	position: absolute;
@@ -331,9 +340,16 @@ nav ul {
     padding: 20px;
     margin-left: 60px;
 }
+.event-name {
+	margin-top: 0;
+}
+/*------ About Taipei -----*/
+#about-taipei {
+	background-color: var(--light-grey);
+}
 /*------ Sponsors -----*/
 .event-sponsors {
-	background-color: #ebebeb;
+	background-color: var(--light-grey);
 }
 
 /*------ FOOTER ------*/
