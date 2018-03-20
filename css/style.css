@@ -353,7 +353,20 @@ nav ul {
 /*------ Sponsors -----*/
 .event-sponsors {
 }
-
+.sponsors-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 50px;
+}
+.sponsors-list div {
+	max-height: 200px;
+	margin-top: 40px;
+	margin: auto;
+}
+.sponsor-logo {
+	max-width: 80%;
+	max-height: inherit;
+}
 /*------ FOOTER ------*/
 footer {
 	width: 100%;
