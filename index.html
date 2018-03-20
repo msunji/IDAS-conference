@@ -12,24 +12,24 @@
 
 	<!-- Main content starts here -->
 	<!-- Brief Intro important details and call to action -->
-	<section class="section event-summary">
+	<section class="section event-summary" id="page-home">
 		<div class="content white-text">
 			<!-- Nav Bar -->
 			<nav>
 				<ul class="desktop-nav">
-					<li><a>Home</a></li>
+					<li><a class="nav-link" href="#page-home">Home</a></li>
 					<li>
-						<a class="dropdown-link">Conference Information</a>
+						<a class="dropdown-link nav-link">Conference Information <span></span></a>
 						<ul class="dropdown-menu">
-							<li>Date and Venue</li>
-							<li>Speakers</li>
-							<li>Important Dates</li>
+							<li><a class="nav-link" href="#event-date-venue">Date and Venue</a></li>
+							<li><a class="nav-link" href="#event-speakers">Speakers</a></li>
+							<li><a class="nav-link" href="#event-schedule">Important Dates</a></li>
 						</ul>
 					</li>
-					<li><a>Call for Abstract/Papers</a></li>
-					<li><a>Registration</a></li>
-					<li><a>About Taipei</a></li>
-					<li><a>Contact</a></li>
+					<li><a class="nav-link" href="#call-for-papers">Call for Abstract/Papers</a></li>
+					<li><a class="nav-link" href="#event-registration">Registration</a></li>
+					<li><a class="nav-link" href="#about-taipei">About Taipei</a></li>
+					<li><a class="nav-link" href="#event-contact">Contact</a></li>
 				</ul>
 			</nav>
 
@@ -65,7 +65,7 @@
 	</section>
 
 	<!-- Programme Venue and Events -->
-	<section class="section event-date-venue">
+	<section class="section" id="event-date-venue">
 		<div class="content center-text white-text">
 			<h1>Date and Venue</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -73,7 +73,7 @@
 	</section>
 
 	<!-- Programme speakers -->
-	<section class="section event-speakers">
+	<section class="section" id="event-speakers">
 		<div class="content">
 			<h1 class="white-text center-text">Speakers</h1>
 			<p class="white-text center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -116,7 +116,7 @@
 	</section>
 
 	<!-- Schedule -->
-	<section class="section call-for-papers">
+	<section class="section" id="call-for-papers">
 		<div class="content">
 			<div>
 				<h1>Call for Papers and Abstracts</h1>
@@ -129,17 +129,55 @@
 	</section>
 
 	<!-- Call for Papers/Abstracts -->
-	<section class="section event-schedule">
-		<div class="content center-text">
-			<h1>Important Dates</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<section class="section" id="event-schedule">
+		<div class="content">
+			<h1 class="center-text">Important Dates</h1>
+			<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<ul class="event-timeline">
+				<li>
+					<div class="event-group">
+						<div class="event-time">
+							<span class="event-date-day">12</span>
+							<span class="event-date-month">April</span>
+						</div>
+						<div class="event-content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="event-group">
+						Event 1
+					</div>
+				</li>
+				<li>
+					<div class="event-group">
+						Event 1
+					</div>
+				</li>
+				<li>
+					<div class="event-group">
+						Event 1
+					</div>
+				</li>
+				<li>
+					<div class="event-group">
+						Event 1
+					</div>
+				</li>
+				<li>
+					<div class="event-group">
+						Event 1
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
 
 
 	<!-- Registration -->
 	<section class="section">
-		<div class="content event-registration">
+		<div class="content" id="event-registration">
 			<h1>Register Now</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<form class="registration-form">
@@ -154,7 +192,7 @@
 
 	<!-- About Taipei -->
 	<section class="section">
-		<div class="content about-taipei">
+		<div class="content" id="about-taipei">
 			<h1>About Taipei</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
@@ -162,7 +200,7 @@
 	
 	<!-- Contact Us -->
 	<section class="section">
-		<div class="content event-contact">
+		<div class="content" id="event-contact">
 			<h1>Contact Us</h1>
 		</div>
 	</section>
@@ -178,6 +216,7 @@
 	<footer>
 	</footer>
 
+	<script src="js/script.js"></script>
 
 </body>
 </html>

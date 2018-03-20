@@ -66,6 +66,12 @@ section {
 	color: white;
 	text-transform: uppercase;
 }
+.cta-button::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: black;
+}
 
 /*----- NAVIGATION -------*/
 nav {
@@ -91,6 +97,8 @@ nav ul {
 	margin-right: 50px;
 }
 .desktop-nav li a {
+	color: var(--white);
+	text-decoration: none;
 	position: relative;
 	display: inline;
 }
@@ -194,7 +202,7 @@ nav ul {
 }
 
 /*------ Event Date and Venue ----*/
-.event-date-venue {
+#event-date-venue {
 	background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url('../assets/img/nccu-mainentrance.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -202,7 +210,7 @@ nav ul {
 }
 
 /*------ Event Speakers -----*/
-.event-speakers {
+#event-speakers {
 	background: var(--dark-grey);
 }
 .speakers-container {
@@ -262,13 +270,14 @@ nav ul {
 }
 
 /*------ Important Dates ----*/
-.event-schedule {
+#event-schedule {
 	background-color: var(--yellow-orange);
 }
 
 /*------ Call for Papers ----*/
-.call-for-papers > .content {
+#call-for-papers > .content {
 	display: grid;
+	align-items: center;
 	grid-gap: 40px;
 	grid-template-columns: 1fr 40%;
 }
@@ -278,6 +287,50 @@ nav ul {
 .call-papers-image > img {
 	max-width: 100%;
 }
+
+/*------ Event Timeline -----*/
+.event-timeline {
+	padding-left: 0;
+	list-style-type: none;
+	margin-left: 40px;
+}
+.event-timeline li {
+	position: relative;
+	width: 5px;
+	margin: 0 auto;
+	padding-top: 50px;
+	background: var(--white);
+}
+/*.event-timeline li::after {
+	content: '';
+	position: absolute;
+	top: 40%;
+	left: 100%;
+	transform: translateX(50%);
+	width: 40px;
+	height: 5px;
+	background: inherit;
+}*/
+
+.event-group {
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.event-time {
+	position: absolute;
+	left: 50%;
+/*	bottom: 0;*/
+	transform: translateX(-50%);
+	background: white;
+	padding: 10px;
+}
+.event-content {
+    background: var(--white);
+    padding: 20px;
+    margin-left: 60px;
+}
 /*------ Sponsors -----*/
 .event-sponsors {
 	background-color: #ebebeb;
@@ -285,7 +338,7 @@ nav ul {
 
 /*------ FOOTER ------*/
 footer {
-	height: 200px;
-	background-color: var(--dark-blue);
+	height: 250px;
+	background-color: var(--dark-grey);
 }
 
