@@ -63,7 +63,7 @@ section {
 }
 
 /*---- Buttons ------*/
-.cta-button {
+.cta {
 	text-decoration: none;
 	padding: 10px 30px 10px 30px;
 	background-color: var(--pink);
@@ -71,7 +71,7 @@ section {
 	text-transform: uppercase;
 	transition: all 0.5s ease-in;
 }
-.cta-button:hover {
+.cta:hover {
 	background-color: var(--white);
 	color: var(--pink);
 }
@@ -80,7 +80,7 @@ nav {
 	background-color: transparent;
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
 nav ul {
 	display: flex;
@@ -168,7 +168,7 @@ nav ul {
 	display: flex;
 	flex-direction: column;
 }
-.event-details {
+.event-summary-details {
 	margin: auto;
 	text-align: center;
 }
@@ -211,6 +211,20 @@ nav ul {
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0 19px 42px -6px rgba(45, 45, 45, 0.2);
+}
+.event-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 40px;
+}
+.event-details div {
+	background-color: var(--white);
+	color: var(--grey-text);
+	font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 /*------ Event Speakers -----*/
@@ -291,7 +305,9 @@ nav ul {
 .call-papers-image > img {
 	max-width: 100%;
 }
-
+#call-for-papers > .content > div > p:last-of-type {
+	margin-bottom: 40px;
+}
 /*------ Event Timeline -----*/
 .event-timeline {
 	padding-left: 0;
@@ -301,7 +317,7 @@ nav ul {
 .event-timeline li {
 	position: relative;
 	width: 5px;
-	margin: 0 auto;
+	margin-left: 30%;
 	padding-top: 50px;
 	background: var(--white);
 }
@@ -325,18 +341,27 @@ nav ul {
 }*/
 
 .event-group {
-	width: 400px;
+	width: 500px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
 .event-time {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	position: absolute;
 	left: 50%;
 /*	bottom: 0;*/
 	transform: translateX(-50%);
 	background: white;
 	padding: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+.event-date-day {
+	font-size: 35px;
+	font-weight: 800;
 }
 .event-content {
     background: var(--white);
