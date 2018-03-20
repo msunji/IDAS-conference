@@ -82,15 +82,44 @@ nav ul {
 	font-weight: 500;
 	margin: 0;
 	padding: 0;
+	position: absolute;
+}
+.desktop-nav {
+	font-size: 13px;
+}
+.desktop-nav li:not(:last-child) {
+	margin-right: 50px;
+}
+.desktop-nav li a {
+	position: relative;
+	display: inline;
+}
+.desktop-nav li a::after {
+	content: '';
+	height: 3px;
+	width: 100%;
+	background: var(--white);
+	top: 110%;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+.desktop-nav li a:hover::after {
+	transform: scaleX(1);
+}
+.dropdown-link li a {
+	position: relative;
 }
 .dropdown-menu {
-	margin-top: 10px;
+	margin-top: 15px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--white);
 	color: var(--dark-grey);
 	border-radius: 8px;
+	display: none;
 }
 .dropdown-menu::before {
     content:"";
@@ -111,12 +140,7 @@ nav ul {
 .dropdown-menu li:not(:last-child) {
 	border-bottom: 1px solid #ccc;
 }
-.desktop-nav {
-	font-size: 13px;
-}
-.desktop-nav li:not(:last-child) {
-	margin-right: 50px;
-}
+
 
 /*----- SECTIONS --------*/
 /*----- Event Summary ---*/
