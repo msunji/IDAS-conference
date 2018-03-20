@@ -1,4 +1,5 @@
 const navLinks = document.querySelectorAll('.nav-link');
+const ctaLinks = document.querySelectorAll('.cta-button');
 
 // Smooth Scroll
 function smoothScroll(e) {
@@ -8,4 +9,4 @@ function smoothScroll(e) {
 }
 
 navLinks.forEach(link => link.addEventListener('click', smoothScroll));
-
+ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
