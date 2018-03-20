@@ -1,29 +1,46 @@
 :root {
-	--white-text: #fff;
-	--grey-text: #2c2c2d;
+	--white: #fff;
+	--grey-text: #525151;
+	--dark-blue: #2a4273;
+	--sky-blue: #0168b7;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body, html {
 	height: 100%;
 }
-body, p {
+body {
+	color: var(--grey-text);
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	line-height: 22px;
+	font-size: 17px;
+	line-height: 26px;
 }
 /*----- Text --------*/
 .white-text {
-	color: var(--white-text);
+	color: var(--white);
 }
 h1 {
 	font-size: 45px;
-	font-family: 'IBM Plex Serif', serif;
+	line-height: 55px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 10px;
+}
+h2 {
+	font-weight: 400;
 }
 section {
 	width: 100%;
 }
 
+/*----- Text Alignment ----*/
+.center-text {
+	text-align: center;
+}
+
 .content {
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
 	padding: 60px 0 60px;
 }
@@ -35,6 +52,14 @@ section {
 	grid-gap: 40px;
 }
 
+/*---- Buttons ------*/
+.cta-button {
+	text-decoration: none;
+	padding: 10px 30px 10px 30px;
+	background-color: #ee6352;
+	color: white;
+	text-transform: uppercase;
+}
 
 /*----- NAVIGATION -------*/
 nav {
@@ -45,11 +70,15 @@ nav {
 }
 nav ul {
 	display: flex;
+	letter-spacing: 0.3px;
 	list-style: none;
 	text-transform: uppercase;
 	font-weight: 500;
 	margin: 0;
 	padding: 0;
+}
+.desktop-nav {
+	font-size: 13px;
 }
 .desktop-nav li:not(:last-child) {
 	margin-right: 50px;
@@ -60,13 +89,13 @@ nav ul {
 .event-summary {
 	display: flex;
 	height: 550px;
-	background-image: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
+	background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: -70% 10%;
 }
 .event-summary > .content {
-	padding-top: 20px;
+	width: 90%;
+	padding: 20px 0 0 0;
 	display: flex;
 	flex-direction: column;
 }
@@ -74,11 +103,55 @@ nav ul {
 	margin: auto;
 	text-align: center;
 }
+.date-time {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin-bottom: 30px;
+}
+.date-time h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.date-time h2:first-of-type {
+	margin-right: 30px;
+}
+
+/*----- Event Summary CTAs ------*/
+.detail-ctas {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.detail-ctas a:first-of-type {
+	margin-right: 50px;
+}
 /*----- Event Info -----*/
 .event-description {
-	background: #1e1e1e;
+	background: var(--white;)
 }
 .video-container {
 	display: flex;
 	justify-content: flex-end;
 }
+
+
+/*------ Event Date and Venue ----*/
+.event-date-venue {
+/*	background: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)), url('../assets/img/nccu-mainentrance.jpg');*/
+	background: var(--sky-blue);
+/*	background-repeat: no-repeat;
+	background-size: cover;*/
+}
+
+/*------ Sponsors -----*/
+.event-sponsors {
+	background-color: #ebebeb;
+}
+
+/*------ FOOTER ------*/
+footer {
+	height: 200px;
+	background-color: var(--dark-blue);
+}
+
