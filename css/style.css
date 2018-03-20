@@ -1,5 +1,8 @@
 :root {
 }
+body, html {
+	height: 100%;
+}
 body, p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
