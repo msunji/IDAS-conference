@@ -236,7 +236,11 @@ nav ul {
 .dropdown-menu li:not(:last-child) {
 	border-bottom: 1px solid #ccc;
 }
-
+.active {
+   transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);
+   -ms-transform: rotate(180deg);
+}
 
 /*----- SECTIONS --------*/
 /*----- Event Summary ---*/

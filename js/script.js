@@ -16,13 +16,16 @@ function smoothScroll(e) {
 function dropdownHandler(e) {
 	e.stopPropagation();
 	dropDown.classList.toggle('show');
+	downCarat.classList.toggle('active');
 }
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
 	dropDown.classList.remove('show');
 }
 
-// Sticky navbar 
+// Sticky navbar
+
+// Event Listeners
 navLinks.forEach(link => link.addEventListener('click', smoothScroll));
 ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
 dropdownLink.addEventListener('click', dropdownHandler);
