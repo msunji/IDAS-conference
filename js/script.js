@@ -1,5 +1,9 @@
+const desktopNav = document.querySelector('.desktop-nav');
 const navLinks = document.querySelectorAll('.nav-link');
 const ctaLinks = document.querySelectorAll('.cta-button-nav');
+const dropdownLink = document.querySelector('.dropdown-link');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const downCarat = document.querySelector('.down-carat');
 
 // Smooth Scroll
 function smoothScroll(e) {
@@ -8,5 +12,14 @@ function smoothScroll(e) {
 	document.querySelector(`${element}`).scrollIntoView({ behavior: 'smooth' });
 }
 
+// Dropdown Menu
+function dropdownMenu(e) {
+	dropdownMenu.classList.toggle("show");
+}
+
+// Sticky navbar 
+
+
 navLinks.forEach(link => link.addEventListener('click', smoothScroll));
 ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
+dropdownLink.addEventListener('click', dropdownMenu);
