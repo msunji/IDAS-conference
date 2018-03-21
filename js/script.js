@@ -2,7 +2,7 @@ const desktopNav = document.querySelector('.desktop-nav');
 const navLinks = document.querySelectorAll('.nav-link');
 const ctaLinks = document.querySelectorAll('.cta-button-nav');
 const dropdownLink = document.querySelector('.dropdown-link');
-const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropDown = document.querySelector('.dropdown-menu');
 const downCarat = document.querySelector('.down-carat');
 
 // Smooth Scroll
@@ -14,7 +14,7 @@ function smoothScroll(e) {
 
 // Dropdown Menu
 function dropdownMenu(e) {
-	dropdownMenu.classList.toggle("show");
+	dropDown.classList.toggle("show");
 }
 
 // Sticky navbar 
