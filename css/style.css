@@ -172,13 +172,13 @@ nav ul {
 .desktop-nav li:not(:last-child) {
 	margin-right: 50px;
 }
-.desktop-nav > li > a {
+.main-link {
 	color: var(--white);
 	text-decoration: none;
 	position: relative;
 	display: inline;
 }
-.desktop-nav li a::after {
+.main-link::after {
 	content: '';
 	height: 3px;
 	width: 100%;
@@ -193,12 +193,12 @@ nav ul {
 	transform: scaleX(1);
 }
 .dropdown-menu {
-	margin-top: 15px;
+	margin-top: 10px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--white);
-	border-radius: 8px;
+	border-top: 4px solid var(--sky-blue);
 	display: none;
 }
 .show {
@@ -213,17 +213,25 @@ nav ul {
     height: 0;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent var(--white) transparent;
+    border-color: transparent transparent var(--sky-blue) transparent;
     z-index:9999;
 }
 .dropdown-menu li {
 	width: 100%;
-	padding: 8px 15px 8px 15px;
+/*	padding: 8px 15px 8px 15px;*/
+	transition: all 0.3s ease-in;
 }
 .dropdown-menu > li > a {
+	padding: 8px 15px 8px 15px;
+	display:block;
 	color: var(--grey-text);
 	text-decoration: none;
 	position: relative;
+	transition: all 0.3s ease-in;
+}
+.dropdown-menu >li > a:hover {
+	color: var(--white);
+	background-color: var(--sky-blue);
 }
 .dropdown-menu li:not(:last-child) {
 	border-bottom: 1px solid #ccc;
