@@ -24,20 +24,20 @@ function hideMenuHandler(e) {
 }
 
 // Sticky navbar
-// function stickyNavHandler(e) {
-// 	const navbar = document.querySelector('.main-nav');
-// 	const sticky = navbar.offsetTop;
-// 	if(window.pageYOffset >= sticky) {
-// 		navbar.classList.add("sticky-nav")
-// 	}
-// 	else {
-// 		navbar.classList.remove("sticky-nav");
-// 	}
-// }
+function stickyNavHandler(e) {
+	const navbar = document.querySelector('.main-nav');
+	const sticky = navbar.offsetTop;
+	if(window.pageYOffset > sticky) {
+		navbar.classList.add("sticky-nav");
+	}
+	else {
+		navbar.classList.remove("sticky-nav");
+	}
+}
 
 // Event Listeners
 navLinks.forEach(link => link.addEventListener('click', smoothScroll));
 ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
 dropdownDesktop.addEventListener('click', dropdownHandlerDesktop);
 window.addEventListener('click', hideMenuHandler);
-// window.addEventListener('scroll', stickyNavHandler);
+window.addEventListener('scroll', stickyNavHandler);
