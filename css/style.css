@@ -163,6 +163,12 @@ nav ul {
 .desktop-nav {
 	font-size: 13px;
 }
+.sticky {
+	position: fixed;
+	top: 0
+	left: 0;
+	width: 100%;
+}
 .desktop-nav li:not(:last-child) {
 	margin-right: 50px;
 }
@@ -194,6 +200,9 @@ nav ul {
 	background-color: var(--white);
 	border-radius: 8px;
 	display: none;
+}
+.show {
+	display: block;
 }
 .dropdown-menu::before {
     content:"";
