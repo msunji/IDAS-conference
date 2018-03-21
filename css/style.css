@@ -463,8 +463,42 @@ nav ul {
 
 
 /*------ About Taipei -----*/
-#about-taipei {
+#about-taiwan {
 	background-color: var(--light-grey);
+}
+.taiwan-photo-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(300px,1fr));
+}
+.taiwan-photo-1 {
+	height: 300px;
+	background: url('../assets/img/taiwan1.jpeg');
+	background-size: cover;
+}
+.taiwan-photo-2 {
+	height: 300px;
+	background: url('../assets/img/taiwan2.jpeg');
+	background-size: cover;
+}
+.taiwan-photo-3 {
+	height: 300px;
+	background: url('../assets/img/taiwan3.jpeg');
+	background-size: cover;
+}
+.taiwan-photo-4 {
+	height: 300px;
+	background: url('../assets/img/taiwan4.jpeg');
+	background-size: cover;
+}
+.taiwan-photo-5 {
+	height: 300px;
+	background: url('../assets/img/taiwan5.jpeg');
+	background-size: cover;
+}
+.taiwan-photo-6 {
+	height: 300px;
+	background: url('../assets/img/taipei6.jpeg');
+	background-size: cover;
 }
 
 /*------ Sponsors -----*/
@@ -484,6 +518,7 @@ nav ul {
 	max-width: 80%;
 	max-height: inherit;
 }
+
 /*------ FOOTER ------*/
 footer {
 	width: 100%;
@@ -492,4 +527,11 @@ footer {
 footer a {
 	color: var(--white);
 	text-decoration: none;
+}
+.icon-background {
+	color: var(--sky-blue);
+	transition: all 0.3s ease-out;
+}
+.icon-background:hover {
+	color: var(--dark-blue);
 }
