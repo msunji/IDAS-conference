@@ -289,6 +289,9 @@ nav ul {
 	display: flex;
 	justify-content: flex-end;
 }
+.video-container iframe{
+	max-width: 100%;
+}
 
 /*------ Event Date and Venue ----*/
 #event-date-venue {
