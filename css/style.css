@@ -352,11 +352,11 @@ nav ul {
 }
 .event-details-date, .event-details-time {
 	display: flex;
-	justify-content: center;
+/*	justify-content: center;*/
 	align-items: center;
 }
 .event-details-date > .fa , .event-details-time > .fa {
-	margin-right: 10px;
+	margin-right: 30px;
 }
 .event-details-date > .fa-calendar-check-o {
 	color: var(--yellow-orange);
