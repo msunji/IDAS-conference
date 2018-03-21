@@ -226,6 +226,20 @@ nav ul {
 	flex-direction: row;
 	justify-content: center;
 }
+.event-details-date, .event-details-time {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.event-details-date > .fa , .event-details-time > .fa {
+	margin-right: 10px;
+}
+.event-details-date > .fa-calendar-check-o {
+	color: var(--yellow-orange);
+}
+.event-details-time > .fa-map-marker {
+	color: var(--pink);
+}
 
 /*------ Event Speakers -----*/
 #event-speakers {
@@ -289,7 +303,7 @@ nav ul {
 
 /*------ Important Dates ----*/
 #event-schedule {
-	background-color: var(--yellow-orange);
+	background-color: var(--sky-blue);
 }
 
 /*------ Call for Papers ----*/
