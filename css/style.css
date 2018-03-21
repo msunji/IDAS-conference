@@ -538,10 +538,16 @@ footer a::after {
 	top: 110%;
 	left: 0;
 }
-.icon-background {
-	color: var(--sky-blue);
-	transition: all 0.3s ease-out;
+.footer-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
-.icon-background:hover {
-	color: var(--dark-blue);
+.contact-details {
+	grid-column: span 2;
+}
+.fa-map-marker {
+	margin-right: 10px;
+}
+.social-media i:first-of-type {
+	margin-right: 15px;
 }
