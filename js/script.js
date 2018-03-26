@@ -18,13 +18,16 @@ function dropdownHandlerDesktop(e) {
 	var dropdownNext = this.nextElementSibling;
 	var downCarat = this.childNodes[1];
 
-	if(!e.target) {
-		dropDown.forEach(menu => menu.classList.remove('show'));
-		downCarat.classList.remove('active');
-	}
-	else {
+	console.log(e.target);
+
+	if(e.target) {
 		dropdownNext.classList.toggle('show');
 		downCarat.classList.toggle('active');	
+
+	}
+	else {
+		dropDown.forEach(menu => menu.classList.remove('show'));
+		downCarat.classList.remove('active');
 	}
 }
 
