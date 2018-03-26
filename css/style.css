@@ -154,7 +154,9 @@ label {
 	background: rgba(42, 66, 115, 0);
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 	-webkit-transition: background 0.3s ease-in-out;
 	-moz-transition: background 0.3s ease-in-out;
 	-o-transition: background 0.3s ease-in-out;
@@ -168,7 +170,6 @@ nav ul {
 	font-weight: 500;
 	margin: 0;
 	padding: 0;
-	position: absolute;
 }
 .desktop-nav {
 	font-size: 13px;
