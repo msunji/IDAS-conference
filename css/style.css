@@ -558,20 +558,23 @@ nav ul {
 	background-size: cover;
 }
 
-/*------ Sponsors -----*/
-.event-sponsors {
+/*------ Contact Us -----*/
+.contact-us {
+	background: var(--light-grey);
 }
-.sponsors-list {
+
+/*------ Sponsors -----*/
+.logos-list {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 50px;
 }
-.sponsors-list div {
+.logos-list div {
 	max-height: 200px;
 	margin-top: 40px;
 	margin: auto;
 }
-.sponsor-logo {
+.logo {
 	max-width: 80%;
 	max-height: inherit;
 }
@@ -598,9 +601,6 @@ footer a::after {
 .footer-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-}
-.contact-details {
-	grid-column: span 2;
 }
 .fa-map-marker {
 	margin-right: 10px;
