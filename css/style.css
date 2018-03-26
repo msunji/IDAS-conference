@@ -384,24 +384,24 @@ nav ul {
 	height: 250px;
 	background-color: var(--white);
 }
-.speaker-photo {
-	background-color: var(--white);
-}
+
 .speaker-1 {
 	background: url('../assets/img/profile1.png');
-	background-size: cover;
 }
 .speaker-2 {
 	background: url('../assets/img/profile2.png');
-	background-size: cover;
 }
 .speaker-3 {
 	background: url('../assets/img/profile3.png');
-	background-size: cover;
 }
 .speaker-4 {
 	background: url('../assets/img/profile4.png');
-	background-size: cover;
+}
+.speaker-photo {
+	background-color: var(--light-grey);
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .speaker-bio {
 	padding: 20px 30px 20px 0;
@@ -562,7 +562,9 @@ nav ul {
 .contact-us {
 	background: var(--light-grey);
 }
-
+.map {
+	max-width: 100%;
+}
 /*------ Sponsors -----*/
 .logos-list {
 	display: grid;
