@@ -213,6 +213,9 @@ nav ul {
 	border-top: 4px solid var(--sky-blue);
 	display: none;
 }
+.down-carat {
+	margin-left: 5px;
+}
 .show {
 	display: block;
 }

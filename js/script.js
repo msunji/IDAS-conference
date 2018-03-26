@@ -1,26 +1,37 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const ctaLinks = document.querySelectorAll('.cta-button-nav');
-const dropdownDesktop= document.querySelector('.dropdown-link');
-const dropDown = document.getElementById('dropdown-desktop');
+const dropdownDesktop= document.querySelectorAll('.dropdown-link');
+const dropDown = document.querySelectorAll('.dropdown-desktop');
+const carats = document.querySelectorAll('.down-carat');
 
 // Smooth Scroll
-function smoothScroll(e) {
-	e.preventDefault();
-	var element = this.getAttribute("href");
-	document.querySelector(element).scrollIntoView({ behavior: 'smooth' });
-}
+// function smoothScroll(e) {
+// 	e.preventDefault();
+// 	var element = this.getAttribute("href");
+// 	document.querySelector(element).scrollIntoView({ behavior: 'smooth' });
+// }
 
 // Dropdown Menu
 function dropdownHandlerDesktop(e) {
+	e.preventDefault();
 	e.stopPropagation();
-	const downCarat = document.querySelector('.down-carat');
-	dropDown.classList.toggle('show');
-	downCarat.classList.toggle('active');
+	var dropdownNext = this.nextElementSibling;
+	var downCarat = this.childNodes[1];
+
+	if(!e.target) {
+		dropDown.forEach(menu => menu.classList.remove('show'));
+		downCarat.classList.remove('active');
+	}
+	else {
+		dropdownNext.classList.toggle('show');
+		downCarat.classList.toggle('active');	
+	}
 }
 
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
-	dropDown.classList.remove('show');
+	dropDown.forEach(menu => menu.classList.remove('show'));
+	carats.forEach(carat => carat.classList.remove('active'));
 }
 
 // Sticky navbar
@@ -36,8 +47,8 @@ function stickyNavHandler(e) {
 }
 
 // Event Listeners
-navLinks.forEach(link => link.addEventListener('click', smoothScroll));
-ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
-dropdownDesktop.addEventListener('click', dropdownHandlerDesktop);
+// navLinks.forEach(link => link.addEventListener('click', smoothScroll));
+// ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
+dropdownDesktop.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);
