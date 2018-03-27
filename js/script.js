@@ -31,6 +31,7 @@ function dropdownHandlerDesktop(e) {
 	var dropdownNext = this.nextElementSibling;
 	var downCarat = this.childNodes[1];
 	e.stopPropagation();
+	e.preventDefault();
 	dropdownNext.classList.toggle('show');
 	downCarat.classList.toggle('active');
 
