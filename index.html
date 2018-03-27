@@ -13,9 +13,9 @@
 
 	<!-- Main content starts here -->
 
-
 	<!-- Brief Intro important details and call to action -->
 	<section class="section event-summary" id="page-home">
+		<div class="slide-overlay">
 			<nav class="main-nav">
 				<div class="nav-content">
 				<div class="nav-logo">
@@ -46,24 +46,33 @@
 				</ul>
 				</div>
 			</nav>
-		<div class="content white-text">
-			<!-- Nav Bar -->
-			<div class="event-summary-details">
-				<h1>2018 IDAS International Conference</h1>
-				<div class="date-time">
-					<h2>November 23-25, 2018</h2>
-					<h2>National Chengchi University, Taipei, Taiwan</h2>
-				</div>
-				<div class="detail-ctas">
-					<a href="#event-registration" class="cta register-cta cta-button-nav">
-						Register Now
-					</a>
-					<a href="#call-for-papers" class="cta submit-cta cta-button-nav">
-						Submit a Paper
-					</a>
+		
+			<div class="content white-text">
+				<div class="event-summary-details">
+					<h1>2018 IDAS International Conference</h1>
+					<div class="date-time">
+						<h2>November 23-25, 2018</h2>
+						<h2>National Chengchi University, Taipei, Taiwan</h2>
+					</div>
+					<div class="detail-ctas">
+						<a href="#event-registration" class="cta register-cta cta-button-nav">
+							Register Now
+						</a>
+						<a href="#call-for-papers" class="cta submit-cta cta-button-nav">
+							Submit a Paper
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="slider-wrap">
+		  <div class="slide slide-1"></div>
+		  <div class="slide slide-2 hide-slide"></div>
+		  <div class="slide slide-3 hide-slide"></div>
+		</div>
+
+
 	</section>
 
 	<!-- Brief into about event -->
@@ -91,8 +100,9 @@
 			</div>
 		</div>
 	</footer>
-	
-	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 	<script src="js/script.js"></script>
 	
 </body>

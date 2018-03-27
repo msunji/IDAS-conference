@@ -4,6 +4,14 @@ const dropdownDesktop= document.querySelectorAll('.dropdown-link');
 const dropDown = document.querySelectorAll('.dropdown-desktop');
 const carats = document.querySelectorAll('.down-carat');
 
+// Slick Slider
+
+$('.slider-wrap').slick({
+	infinite: true,
+	fade: false,
+	speed: 300,
+	dots: true
+});
 
 
 // Smooth Scroll
@@ -53,6 +61,7 @@ function stickyNavHandler(e) {
 		navbarLogo.classList.remove("sticky-logo");
 	}
 }
+
 
 // Event Listeners
 navLinks.forEach(link => link.addEventListener('click', smoothScroll));
