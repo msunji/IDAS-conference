@@ -15,17 +15,15 @@ const carats = document.querySelectorAll('.down-carat');
 
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
-
-	// var downCarat = this.childNodes[1];
-	console.log(e);
 	dropdownDesktop.forEach(dropdown => {
 		var dropdownNext = dropdown.nextElementSibling;
+		var downCarat = dropdown.childNodes[1];
+
 		if(dropdownNext.classList.contains('show') && dropdownNext.id !== e) {
 			dropdownNext.classList.remove('show');
+			downCarat.classList.remove('active');
 		} 
 	});
-	// dropDown.forEach(menu => menu.classList.remove('show'));
-	// carats.forEach(carat => carat.classList.remove('active'));
 }
 
 // Dropdown Menu
@@ -34,6 +32,9 @@ function dropdownHandlerDesktop(e) {
 	var downCarat = this.childNodes[1];
 	e.stopPropagation();
 	dropdownNext.classList.toggle('show');
+	downCarat.classList.toggle('active');
+
+	// fire hide menu handler
 	hideMenuHandler(dropdownNext.id);
 }
 
