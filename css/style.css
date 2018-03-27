@@ -568,6 +568,27 @@ nav ul {
 .map {
 	max-width: 100%;
 }
+
+/*------ Newsletter -----*/
+.event-newsletter {
+	background: url('../assets/img/mailing-list-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.newsletter-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#newsletter-form {
+	display: flex;
+	flex-direction: row;
+}
+#newsletter-form input[type=email] {
+	margin-bottom: 0;
+	margin-right: 10px;
+}
 /*------ Sponsors -----*/
 .logos-list {
 	display: grid;
