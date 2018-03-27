@@ -162,6 +162,15 @@ label {
 	-o-transition: background 0.3s ease-in-out;
 	transition: background 0.3s ease-in-out;
 }
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 20px;
+}
 nav ul {
 	display: flex;
 	letter-spacing: 0.3px;
@@ -280,17 +289,11 @@ nav ul {
 /*----- SECTIONS --------*/
 /*----- Event Summary ---*/
 .event-summary {
-	height: 550px;
+	height: auto;
+	padding-bottom: 90px;
 	background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-.event-summary > .content {
-	height: 100%;
-	width: 90%;
-	padding: 20px 0 0 0;
-	display: flex;
-	flex-direction: column;
 }
 .event-summary-details {
 	margin: auto;
