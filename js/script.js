@@ -7,11 +7,11 @@ const carats = document.querySelectorAll('.down-carat');
 
 
 // Smooth Scroll
-// function smoothScroll(e) {
-// 	e.preventDefault();
-// 	var element = this.getAttribute("href");
-// 	document.querySelector(element).scrollIntoView({ behavior: 'smooth' });
-// }
+function smoothScroll(e) {
+	e.preventDefault();
+	var element = this.getAttribute("href");
+	document.querySelector(element).scrollIntoView({ behavior: 'smooth' });
+}
 
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
@@ -55,8 +55,8 @@ function stickyNavHandler(e) {
 }
 
 // Event Listeners
-// navLinks.forEach(link => link.addEventListener('click', smoothScroll));
-// ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
+navLinks.forEach(link => link.addEventListener('click', smoothScroll));
+ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
 dropdownDesktop.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);

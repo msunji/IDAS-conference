@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>2018 IDAS Conference | Conference Schedule</title>
+	<title>2018 IDAS Conference | Detailed Conference Schedule</title>
 	<script src="https://use.fontawesome.com/9f93eeeb95.js"></script>
 	<link href="css/normalize.css" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800|Roboto" rel="stylesheet">
@@ -15,28 +15,38 @@
 
 	<!-- Brief Intro important details and call to action -->
 	<section class="section event-summary" id="page-home">
-		<div class="content white-text">
-			<!-- Nav Bar -->
 			<nav class="main-nav">
-				<div class="desktop-logo">
+				<div class="nav-content">
+				<div class="nav-logo">
 					<img src="assets/img/IDASLogoFull.png" alt="International Doctoral Program in Asia-Pacific Studies Logo">
 				</div>
 				<ul class="desktop-nav">
-					<li><a class="main-link nav-link" href="#page-home">Home</a></li>
+					<li><a class="main-link nav-link" href="index.html#page-home">Home</a></li>
 					<li>
-						<a href="#" class="main-link nav-link dropdown-link"><span>Conference Information</span> <i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
-						<ul class="dropdown-menu" id="dropdown-desktop">
-							<li><a class="nav-link" href="#event-date-venue">Date and Venue</a></li>
-							<li><a class="nav-link" href="#event-speakers">Speakers</a></li>
-							<li><a class="nav-link" href="#event-schedule">Important Dates</a></li>
+						<a href="#" class="main-link nav-link dropdown-link"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown-menu dropdown-desktop" id="about-dropdown">
+							<li><a class="nav-link" href="index.html#event-date-venue">Date and Venue</a></li>
+							<li><a class="nav-link" href="index.html#event-schedule">Important Dates</a></li>
+							<li><a class="main-link nav-link" href="index.html#about-taiwan">About Taipei</a></li>
 						</ul>
 					</li>
-					<li><a class="main-link nav-link" href="#call-for-papers">Call for Abstract/Papers</a></li>
-					<li><a class="main-link nav-link" href="#event-registration">Registration</a></li>
-					<li><a class="main-link nav-link" href="#about-taiwan">About Taipei</a></li>
-					<li><a class="main-link nav-link" href="#event-contact">Contact</a></li>
+					<li>
+						<a href="#" class="main-link nav-link dropdown-link"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown-menu dropdown-desktop" id="program-dropdown">
+							<li><a class="nav-link" href="panels.html">Panels</a></li>
+							<li><a class="nav-link" href="index.html#event-speakers">Speakers</a></li>
+							<li><a class="nav-link" href="schedule.html">Schedule</a></li>
+						</ul>
+					</li>
+					<li><a class="main-link nav-link" href="index.html#call-for-papers">Call for Abstract/Papers</a></li>
+					<li><a class="main-link nav-link" href="index.html#event-registration">Registration</a></li>
+					
+					<li><a class="main-link nav-link" href="index.html#event-contact">Contact</a></li>
 				</ul>
+				</div>
 			</nav>
+		<div class="content white-text">
+			<!-- Nav Bar -->
 			<div class="event-summary-details">
 				<h1>2018 IDAS International Conference</h1>
 				<div class="date-time">
@@ -306,6 +316,38 @@
 		</div>
 	</section> 
 	
+	<!-- Contact Us -->
+	<section class="section contact-us">
+		<div class="content two-column">
+			<div class="contact-details white-text align-center">
+				<h1>Contact Us</h1>
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i> No. 64, Section 2, Zhinan Road., Wenshan District, Taipei City, Taiwan</p>
+				<p><i class="fa fa-phone" aria-hidden="true"></i> +886-2-2939-3091 Ext. 51278</p>
+				<p><i class="fa fa-envelope" aria-hidden="true"></i> idas@nccu.edu.tw</p>
+			</div>
+			<div class="google-map">
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.3707216031075!2d121.57387995117466!3d24.987515983915497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa79452c2f49%3A0x9e8d07508e3bf507!2sNational+Chengchi+University!5e0!3m2!1sen!2stw!4v1522048877025" width="700" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>	
+
+	<!-- Mailing List -->
+	<section class="section event-newsletter">
+		<div class="content newsletter-container">
+			<h1 class="center-text white-text">Stay Updated</h1>
+			<p class="white-text">Sign up to our mailing list to stay up to date with the latest conference news.</p>
+			<div class="newsletter-form-container">
+				<form id="newsletter-form">
+				  <label>
+				  	<input type="email" placeholder="Your Email Address">
+				  </label>
+				 
+				  <input class="submit-button" type="submit" value="Sign Up">
+				</form>
+			</div>
+		</div>
+	</section>		
+
 	<!-- Sponsors List -->
 	<section class="section event-logos">
 		<div class="content">
@@ -330,13 +372,6 @@
 	<!-- Footer -->
 	<footer class="section" id="event-contact">
 		<div class="footer-wrapper content white-text">
-			<div class="contact-details">
-				<h1>Contact Us</h1>
-				<p>If you have any questions or comments, contact us at <a href="">email@email.com</a>.</p>
-
-				<p><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> No. 64, Section 2, Zhinan Road, Wenshan District, Taipei City, 116</p>
-
-			</div>
 			<div>
 				<h1>Stay Connected</h1>
 				<div class="social-media">
@@ -346,8 +381,8 @@
 			</div>
 		</div>
 	</footer>
-
+	
 	<script src="js/script.js"></script>
-
+	
 </body>
 </html>
