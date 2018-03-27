@@ -42,12 +42,15 @@ function dropdownHandlerDesktop(e) {
 // Sticky navbar
 function stickyNavHandler(e) {
 	const navbar = document.querySelector('.main-nav');
+	const navbarLogo = document.querySelector('.nav-logo > img');
 	const sticky = navbar.offsetTop;
 	if(window.pageYOffset > sticky) {
 		navbar.classList.add("sticky-nav");
+		navbarLogo.classList.add("sticky-logo");
 	}
 	else {
 		navbar.classList.remove("sticky-nav");
+		navbarLogo.classList.remove("sticky-logo");
 	}
 }
 
