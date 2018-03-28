@@ -193,6 +193,7 @@ label {
 /*----- NAVIGATION -------*/
 .main-nav {
 	position: absolute;
+	z-index: 999;
 	top: 0;
 	left: 0;
 	background: rgba(42, 66, 115, 0);
