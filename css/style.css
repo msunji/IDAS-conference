@@ -13,13 +13,14 @@
 :root {
 	--white: #fff;
 	--grey-text: #525151;
-	--light-grey: #ebebeb;
+	--light-grey: #f9f9f9;
 	--dark-grey: #212425;
 	--dark-blue: #2a4273;
 	--sky-blue: #0168b7;
 	--yellow-orange: #ffc238;
 	--pink: #ee6352;
 	--green: #09ad74;
+	--tan: #bdb0a6;
 }
 
 * {
@@ -58,6 +59,10 @@ h2 {
 }
 section {
 	width: 100%;
+}
+
+a {
+	color: var(--pink);
 }
 
 /*----- Text Alignment ----*/
@@ -525,6 +530,11 @@ nav ul {
 	background-color: var(--sky-blue);
 }
 
+/*------ Panels ----*/
+#event-panels {
+	background: var(--light-grey);
+}
+
 /*------ Call for Papers ----*/
 #call-for-papers > .content {
 	display: grid;
@@ -698,6 +708,12 @@ nav ul {
 }
 
 /*------ CONFERENCE SCHEDULE ------*/
+/*.day-title::after {
+	content: '';
+	position: absolute;
+	top
+}*/
+
 .sched-table {
 	width: 100%;
 }
