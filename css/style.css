@@ -189,6 +189,34 @@ label {
 .slick-prev {
 	left: 25px;
 }
+.slick-prev:before, .slick-next:before { 
+	font-family: FontAwesome; 
+	font-size: 40px; 
+	line-height: 1; 
+	color: white; 
+	opacity: 0.75; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale; 
+}   
+
+.slick-prev:before { 
+	content: "\f053"; 
+}
+[dir="rtl"] .slick-prev:before { 
+	content: "\f054"; 
+}
+
+[dir="rtl"] .slick-next { 
+	left: -10px; 
+	top: 70px; 
+	right: auto; 
+}
+.slick-next:before { 
+	content: "\f054"; 
+}
+[dir="rtl"] .slick-next:before { 
+	content: "\f053"; 
+}
 
 /*----- NAVIGATION -------*/
 .main-nav {
@@ -654,6 +682,7 @@ nav ul {
 }
 /*------ Sponsors -----*/
 .logos-list {
+	margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 50px;
