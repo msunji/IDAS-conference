@@ -8,11 +8,10 @@ const carats = document.querySelectorAll('.down-carat');
 
 $('.slider-wrap').slick({
 	infinite: true,
-	fade: false,
-	speed: 300,
-	dots: true
+	fade: true,
+	speed: 2500,
+	dots: false
 });
-
 
 // Smooth Scroll
 function smoothScroll(e) {
