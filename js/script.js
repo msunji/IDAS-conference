@@ -9,7 +9,7 @@ const carats = document.querySelectorAll('.down-carat');
 $('.slider-wrap').slick({
 	infinite: true,
 	fade: true,
-	speed: 2500,
+	speed: 300,
 	dots: false
 });
 

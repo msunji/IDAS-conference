@@ -165,13 +165,20 @@ label {
 	height: 100%;
 }
 .slide-1 {
-	background: var(--yellow-orange);
+    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .slide-2 {
-	background: var(--dark-blue);
+    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/nccu-mainentrance.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .slide-3 {
-	background: var(--dark-grey);
+    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/gen-building.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: bottom;
 }
 .slick-arrow {
 	z-index: 2;
