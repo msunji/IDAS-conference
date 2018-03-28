@@ -2,67 +2,78 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>2018 IDAS Conference | Panels</title>
+	<title>2018 IDAS Conference | Conference Panels</title>
 	<script src="https://use.fontawesome.com/9f93eeeb95.js"></script>
 	<link href="css/normalize.css" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800|Roboto" rel="stylesheet">
+	<link href="css/slick.css" rel="stylesheet">
+	<link href="css/slick-theme.css" rel="stylesheet"> 
 	<link href="css/style.css" rel="stylesheet"> 
 </head>
 <body>
 
 	<!-- Main content starts here -->
 
-
 	<!-- Brief Intro important details and call to action -->
 	<section class="section event-summary" id="page-home">
+		<div class="slide-overlay">
 			<nav class="main-nav">
 				<div class="nav-content">
 				<div class="nav-logo">
 					<img src="assets/img/IDASLogoFull.png" alt="International Doctoral Program in Asia-Pacific Studies Logo">
 				</div>
 				<ul class="desktop-nav">
-					<li><a class="main-link nav-link" href="index.html#page-home">Home</a></li>
+					<li><a class="main-link nav-link" href="#page-home">Home</a></li>
 					<li>
 						<a href="#" class="main-link nav-link dropdown-link"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 						<ul class="dropdown-menu dropdown-desktop" id="about-dropdown">
-							<li><a class="nav-link" href="index.html#event-date-venue">Date and Venue</a></li>
-							<li><a class="nav-link" href="index.html#event-schedule">Important Dates</a></li>
-							<li><a class="main-link nav-link" href="index.html#about-taiwan">About Taipei</a></li>
+							<li><a class="nav-link" href="#event-date-venue">Date and Venue</a></li>
+							<li><a class="nav-link" href="#event-schedule">Important Dates</a></li>
+							<li><a class="main-link nav-link" href="#about-taiwan">About Taipei</a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="#" class="main-link nav-link dropdown-link"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 						<ul class="dropdown-menu dropdown-desktop" id="program-dropdown">
 							<li><a class="nav-link" href="panels.html">Panels</a></li>
-							<li><a class="nav-link" href="index.html#event-speakers">Speakers</a></li>
+							<li><a class="nav-link" href="#event-speakers">Speakers</a></li>
 							<li><a class="nav-link" href="schedule.html">Schedule</a></li>
 						</ul>
 					</li>
-					<li><a class="main-link nav-link" href="index.html#call-for-papers">Call for Abstract/Papers</a></li>
-					<li><a class="main-link nav-link" href="index.html#event-registration">Registration</a></li>
+					<li><a class="main-link nav-link" href="#call-for-papers">Call for Abstract/Papers</a></li>
+					<li><a class="main-link nav-link" href="#event-registration">Registration</a></li>
 					
-					<li><a class="main-link nav-link" href="index.html#event-contact">Contact</a></li>
+					<li><a class="main-link nav-link" href="#event-contact">Contact</a></li>
 				</ul>
 				</div>
 			</nav>
-		<div class="content white-text">
-			<!-- Nav Bar -->
-			<div class="event-summary-details">
-				<h1>2018 IDAS International Conference</h1>
-				<div class="date-time">
-					<h2>November 23-25, 2018</h2>
-					<h2>National Chengchi University, Taipei, Taiwan</h2>
-				</div>
-				<div class="detail-ctas">
-					<a href="#event-registration" class="cta register-cta cta-button-nav">
-						Register Now
-					</a>
-					<a href="#call-for-papers" class="cta submit-cta cta-button-nav">
-						Submit a Paper
-					</a>
+		
+			<div class="content">
+				<div class="event-summary-details white-text">
+					<h1>2018 IDAS International Conference</h1>
+					<div class="date-time">
+						<h2>November 23-25, 2018</h2>
+						<h2>National Chengchi University, Taipei, Taiwan</h2>
+					</div>
+					<div class="detail-ctas">
+						<a href="#event-registration" class="cta register-cta cta-button-nav">
+							Register Now
+						</a>
+						<a href="#call-for-papers" class="cta submit-cta cta-button-nav">
+							Submit a Paper
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="slider-wrap">
+		  <div class="slide slide-1"></div>
+		  <div class="slide slide-2"></div>
+		  <div class="slide slide-3"></div>
+		</div>
+
+
 	</section>
 
 	<!-- Brief into about event -->
@@ -77,7 +88,6 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- Programme Venue and Events -->
 	<section class="section" id="event-date-venue">
 		<div class="content white-text">
@@ -368,7 +378,7 @@
 			</div>
 		</div>
 	</section>
-
+	
 	<!-- Footer -->
 	<footer class="section" id="event-contact">
 		<div class="footer-wrapper content white-text">
@@ -381,7 +391,9 @@
 			</div>
 		</div>
 	</footer>
-	
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
 	
 </body>

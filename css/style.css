@@ -697,6 +697,12 @@ nav ul {
 	max-height: inherit;
 }
 
+/*------ CONFERENCE SCHEDULE ------*/
+.sched-table {
+	width: 100%;
+}
+
+
 /*------ FOOTER ------*/
 footer {
 	width: 100%;
