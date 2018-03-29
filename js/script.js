@@ -94,7 +94,7 @@ for (i = 0; i < acc.length; i++) {
 // Event Listeners
 // navLinks.forEach(link => link.addEventListener('click', smoothScroll));
 // ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
-showHideButton.addEventListener('click', showHideHandler);
+// showHideButton.addEventListener('click', showHideHandler);
 dropdownDesktop.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);
