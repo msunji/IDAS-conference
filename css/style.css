@@ -662,7 +662,6 @@ nav ul {
 	align-items: center;
 	position: absolute;
 	left: 50%;
-/*	bottom: 0;*/
 	transform: translateX(-50%);
 	background: white;
 	padding: 10px;
@@ -772,8 +771,19 @@ nav ul {
 }
 
 /*------ CONFERENCE SCHEDULE ------*/
-.event-description div h1 {
-	margin-bottom: 40px;
+.schedule-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.show-panels {
+	outline: none;
+	border: none;
+	background: var(--green);
+	color: var(--white);
+	padding: 10px;
 }
 .accordion-switch {
 	width: 100%;
