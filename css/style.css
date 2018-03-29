@@ -20,7 +20,7 @@
 	--yellow-orange: #ffc238;
 	--pink: #ee6352;
 	--green: #09ad74;
-	--tan: #bdb0a6;
+	--baby-blue: #c6dff7;
 }
 
 * {
@@ -537,7 +537,7 @@ nav ul {
 
 /*------ Important Dates ----*/
 #event-schedule {
-	background-color: var(--sky-blue);
+	background-color: var(--dark-blue);
 }
 .day-title {
 	background-color: var(--sky-blue);
@@ -545,8 +545,28 @@ nav ul {
 	color: var(--white);
 	display: flex;
 	justify-content: space-between;
+	margin-top: 3px;
+	margin-bottom: 0;
+}
+.table-container {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .sched-table {
+	border-collapse: collapse;
+}
+.sched-table th, .sched-table td {
+	padding: 10px;
+}
+.sched-table td {
+	border-bottom: 1px solid slategrey;
+}
+.table-headers{
+	background: var(--dark-grey);
+	color: var(--white);
+}
+.sched-break {
+	background: var(--baby-blue);
 }
 
 /*------ Panels ----*/
