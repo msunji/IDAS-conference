@@ -557,6 +557,29 @@ nav ul {
 .speaker-detailed-bio {
 	margin: auto;
 }
+
+/*------ Speakers -- ALTERNATIVE ----*/
+.speaker-info {
+	margin-bottom: 40px;
+}
+.detailed-speakers-alt-container {
+	background: var(--dark-blue);
+}
+
+.detailed-speakers-alt-container .content {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+.speakers-page-alt {
+	background: var(--white);
+}
+.info-alt {
+	grid-template-columns: 1fr;
+	height: 300px;
+}
+
 /*------ Important Dates ----*/
 #event-schedule {
 	background-color: var(--dark-blue);
