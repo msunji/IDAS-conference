@@ -63,8 +63,8 @@ function stickyNavHandler(e) {
 
 
 // Event Listeners
-navLinks.forEach(link => link.addEventListener('click', smoothScroll));
-ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
+// navLinks.forEach(link => link.addEventListener('click', smoothScroll));
+// ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
 dropdownDesktop.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);
