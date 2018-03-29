@@ -16,7 +16,7 @@
 	--light-grey: #f9f9f9;
 	--dark-grey: #212425;
 	--dark-blue: #2a4273;
-	--sky-blue: #0168b7;
+	--sky-blue: #419df3;
 	--yellow-orange: #ffc238;
 	--pink: #ee6352;
 	--green: #09ad74;
@@ -36,8 +36,8 @@ body, html {
 body {
 	color: var(--grey-text);
 	font-family: 'Roboto', sans-serif;
-	font-size: 17px;
-	line-height: 26px;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 /*****************************************/
@@ -48,8 +48,8 @@ body {
 }
 
 h1 {
-	font-size: 45px;
-	line-height: 55px;
+	font-size: 34px;
+	line-height: 45px;
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 10px;
 	margin-top: 0px;
@@ -170,17 +170,20 @@ label {
 	height: 100%;
 }
 .slide-1 {
-    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
+/*    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');*/
+    background: url('../assets/img/remi-yuan-taipei101.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .slide-2 {
-    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/nccu-mainentrance.jpg');
+/*    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/nccu-mainentrance.jpg');*/
+    background: url('../assets/img/nccu-mainentrance.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .slide-3 {
-    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/gen-building.jpg');
+/*    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/gen-building.jpg');*/
+    background: url('../assets/img/gen-building.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: bottom;
@@ -374,7 +377,7 @@ nav ul {
 /*----- SECTIONS --------*/
 /*----- Event Summary ---*/
 .event-summary {
-	height: 550px;
+	height: 500px;
 /*	background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -528,6 +531,15 @@ nav ul {
 /*------ Important Dates ----*/
 #event-schedule {
 	background-color: var(--sky-blue);
+}
+.day-title {
+	background-color: var(--sky-blue);
+	padding: 10px;
+	color: var(--white);
+	display: flex;
+	justify-content: space-between;
+}
+.sched-table {
 }
 
 /*------ Panels ----*/
