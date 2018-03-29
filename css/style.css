@@ -727,9 +727,15 @@ nav ul {
 }*/
 
 .sched-table {
-	width: 100%;
+	width: 95%;
+	margin: 0 auto;
 }
-
+th {
+	text-align: left;
+}
+.table-time {
+	width: 20%;
+}
 
 /*------ FOOTER ------*/
 footer {
