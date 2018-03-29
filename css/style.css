@@ -772,6 +772,9 @@ nav ul {
 }
 
 /*------ CONFERENCE SCHEDULE ------*/
+.event-description div h1 {
+	margin-bottom: 40px;
+}
 .accordion-switch {
 	width: 100%;
     display: flex;
