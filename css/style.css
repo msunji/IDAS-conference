@@ -21,6 +21,7 @@
 	--pink: #ee6352;
 	--green: #09ad74;
 	--light-orange: #f9e5bd;
+	--rose: #ffd5d5;
 }
 
 * {
@@ -68,6 +69,10 @@ section {
 
 a {
 	color: var(--pink);
+}
+
+.underline {
+	text-decoration: underline;
 }
 
 /*----- Text Alignment ----*/
@@ -612,6 +617,9 @@ nav ul {
 }
 .sched-break {
 	background: var(--light-orange);
+}
+.sched-impt {
+	background: var(--rose);
 }
 .hidden {
 	display: none;
