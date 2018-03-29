@@ -20,7 +20,7 @@
 	--yellow-orange: #ffc238;
 	--pink: #ee6352;
 	--green: #09ad74;
-	--baby-blue: #c6dff7;
+	--light-orange: #f9e5bd;
 }
 
 * {
@@ -566,7 +566,7 @@ nav ul {
 	color: var(--white);
 }
 .sched-break {
-	background: var(--baby-blue);
+	background: var(--light-orange);
 }
 
 /*------ Panels ----*/
