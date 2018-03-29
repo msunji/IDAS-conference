@@ -182,9 +182,10 @@ label {
 }
 .slide-2 {
 /*    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/nccu-mainentrance.jpg');*/
-    background: url('../assets/img/nccu-mainentrance.jpg');
+    background: url('../assets/img/nccu-main-entrance.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 .slide-3 {
 /*    background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/gen-building.jpg');*/
