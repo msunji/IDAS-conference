@@ -375,6 +375,9 @@ nav ul {
 	left: 0;
 	top: 0;
 	z-index: 9999;
+	-webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+	-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+	box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 .sticky-logo {
 	width: 50%;
@@ -567,6 +570,9 @@ nav ul {
 }
 .sched-break {
 	background: var(--light-orange);
+}
+.hidden {
+	display: none;
 }
 
 /*------ Panels ----*/
