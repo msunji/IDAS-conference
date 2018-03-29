@@ -772,12 +772,31 @@ nav ul {
 }
 
 /*------ CONFERENCE SCHEDULE ------*/
-/*.day-title::after {
-	content: '';
-	position: absolute;
-	top
-}*/
-
+.accordion-switch {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--sky-blue);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    margin-bottom: 5px;
+    outline: none;
+}
+.accordion-panel {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+.open-panel {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	overflow: auto;
+	max-height: 100%;
+}
 .sched-table {
 	width: 95%;
 	margin: 0 auto;
