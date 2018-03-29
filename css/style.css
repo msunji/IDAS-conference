@@ -537,7 +537,26 @@ nav ul {
 	height: 4px;
 	background: var(--yellow-orange);
 }
-
+.speakers-page-intro {
+	background: var(--light-grey);
+}
+.speaker-detailed {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.speaker-pic-circle {
+	width: 280px;
+	height: 280px;
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+	background: var(--light-orange);
+}
+.speaker-detailed-bio {
+	margin: auto;
+}
 /*------ Important Dates ----*/
 #event-schedule {
 	background-color: var(--dark-blue);
