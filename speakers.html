@@ -2,64 +2,66 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>2018 IDAS Conference | Conference Speakers -- Alternative Layout</title>
+	<title>Meet Our Speakers | 2018 IDAS Conference</title>
 	<script src="https://use.fontawesome.com/9f93eeeb95.js"></script>
 	<link href="css/normalize.css" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800|Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,700" rel="stylesheet">
 	<link href="css/slick.css" rel="stylesheet">
 	<link href="css/slick-theme.css" rel="stylesheet"> 
 	<link href="css/style.css" rel="stylesheet"> 
 </head>
 <body>
 
-	<!-- Main content starts here -->
-
-	<!-- Brief Intro important details and call to action -->
+	<!-- JUMBOTRON SECTION -->
 	<section class="jumbotron" id="page-home">
 		<div class="slide-overlay">
-			<nav class="main-nav">
-				<div class="nav-content">
-				<div class="nav-logo">
-					<img src="assets/img/IDASLogoFull.png" alt="International Doctoral Program in Asia-Pacific Studies Logo">
+			<nav class="desktop-nav">
+				<div class="nav__content">
+					<div>
+						<a href="index.html"><img class="nav__logo" src="assets/img/IDASLogoFull.png" alt="International Doctoral Program in Asia-Pacific Studies Logo"></a>
+					</div>
+					<ul class="desktop-nav__links">
+						<li><a class="nav__link" href="#page-home">Home</a></li>
+						<li>
+							<a href="#" class="nav__link dropdown-switch"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+							<ul class="dropdown-menu dropdown--desktop" id="about-dropdown">
+								<li><a class="nav__link" href="#event-date-venue">Date and Venue</a></li>
+								<li><a class="nav__link" href="#event-schedule">Important Dates</a></li>
+								<li><a class="nav__link" href="#about-taiwan">About Taipei</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="nav__link dropdown-switch"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+							<ul class="dropdown-menu dropdown--desktop" id="program-dropdown">
+								<li><a class="nav__link" href="panels.html">Panels</a></li>
+								<li><a class="nav__link" href="speakers.html">Speakers</a></li>
+								<li><a class="nav__link" href="schedule.html">Schedule</a></li>
+							</ul>
+						</li>
+						<li><a class="nav__link" href="#call-for-papers">Call for Abstract/Papers</a></li>
+						<li><a class="nav__link" href="#event-registration">Registration</a></li>
+						
+						<li><a class="nav__link" href="#event-contact">Contact</a></li>
+					</ul>
 				</div>
-				<ul class="desktop-nav">
-					<li><a class="main-link nav-link" href="index.html">Home</a></li>
-					<li>
-						<a href="#" class="main-link nav-link dropdown-link"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
-						<ul class="dropdown-menu dropdown-desktop" id="about-dropdown">
-							<li><a class="nav-link" href="#event-date-venue">Date and Venue</a></li>
-							<li><a class="nav-link" href="#event-schedule">Important Dates</a></li>
-							<li><a class="nav-link" href="#about-taiwan">About Taipei</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="main-link nav-link dropdown-link"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
-						<ul class="dropdown-menu dropdown-desktop" id="program-dropdown">
-							<li><a class="nav-link" href="panels.html">Panels</a></li>
-							<li><a class="nav-link" href="speakers.html">Speakers</a></li>
-							<li><a class="nav-link" href="schedule.html">Schedule</a></li>
-						</ul>
-					</li>
-					<li><a class="main-link nav-link" href="#call-for-papers">Call for Abstract/Papers</a></li>
-					<li><a class="main-link nav-link" href="#event-registration">Registration</a></li>
-					
-					<li><a class="main-link nav-link" href="#event-contact">Contact</a></li>
-				</ul>
-				</div>
+			</nav>
+
+			<nav class="mobile-nav">
 			</nav>
 		
 			<div class="content">
-				<div class="event-summary-details white-text">
+				<div class="jumbotron__text white-text">
 					<h1>2018 IDAS International Conference</h1>
-					<div class="date-time">
+					<h2>Transformation and Challenges in the Asia Pacific: The Next Decade and Beyond</h2>
+					<div class="jumbotron__date-time">
 						<h2>November 23-25, 2018</h2>
 						<h2>National Chengchi University, Taipei, Taiwan</h2>
 					</div>
-					<div class="detail-ctas">
-						<a href="#event-registration" class="cta register-cta cta-button-nav">
+					<div class="jumbotron___ctas">
+						<a href="#event-registration" class="jumbotron__btn btn btn--pink">
 							Register Now
 						</a>
-						<a href="#call-for-papers" class="cta submit-cta cta-button-nav">
+						<a href="#call-for-papers" class="jumbotron__btn btn btn--pink">
 							Submit a Paper
 						</a>
 					</div>
@@ -72,7 +74,6 @@
 		  <div class="slide slide-2"></div>
 		  <div class="slide slide-3"></div>
 		</div>
-
 
 	</section>
 
@@ -129,14 +130,13 @@
 	</section>
 	
 	<!-- Footer -->
-	<footer class="section" id="event-contact">
+	<footer class="section">
 		<div class="footer-wrapper content white-text">
 			<div>
-				<h1>Stay Connected</h1>
-				<div class="social-media">
-					<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-					<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-				</div>
+				<h1>Related Links</h1>
+				NCCU LOGO Goes Here
+				IDAS LOGO goes here
+				Social Science college logo goes here
 			</div>
 		</div>
 	</footer>
