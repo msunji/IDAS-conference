@@ -574,7 +574,6 @@ nav ul {
 .detailed-speakers-alt-container .content {
 	display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-gap: 40px;
 }
 .speakers-page-alt {
@@ -582,7 +581,8 @@ nav ul {
 }
 .info-alt {
 	grid-template-columns: 1fr;
-	height: 300px;
+	grid-template-rows: 200px 1fr;
+	height: auto;
 }
 
 /*------ Important Dates ----*/
