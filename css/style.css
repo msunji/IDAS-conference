@@ -764,11 +764,55 @@ a {
 	padding: 15px 40px 40px 40px;
 }
 
-
 /*********************************************/
 /* 		6.3c - SCHEDULE PAGE  		  	     */
 /*********************************************/
 
+.sched__table {
+	border-collapse: collapse;
+}
+
+.sched__table th, .sched__table td {
+	padding: 10px;
+}
+
+.sched__table td {
+	border-bottom: 1px solid slategrey;
+}
+
+.table__headers {
+	background: var(--dark-grey);
+	color: var(--white);
+}
+
+.sched--break {
+	background: var(--light-orange);
+}
+
+.sched--impt {
+	background: var(--rose);
+}
+
+.schedule__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.sched__table {
+	width: 95%;
+	margin: 0 auto;
+}
+
+th {
+	text-align: left;
+}
+
+.table__time {
+	width: 20%;
+}
 
 /*********************************************/
 /*											 */
@@ -914,17 +958,21 @@ label {
     outline: none;
 }
 
-.accordion-panel {
+.accordion__panel {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 }
 
-.open-panel {
+.panel--open {
 	padding-top: 40px;
 	padding-bottom: 40px;
 	overflow: auto;
 	max-height: 100%;
+}
+
+.panel--hidden {
+	display: none;
 }
 
 /*********************************************/
@@ -1025,32 +1073,7 @@ label {
 	margin-top: 3px;
 	margin-bottom: 0;
 }
-.table-container {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.sched-table {
-	border-collapse: collapse;
-}
-.sched-table th, .sched-table td {
-	padding: 10px;
-}
-.sched-table td {
-	border-bottom: 1px solid slategrey;
-}
-.table-headers{
-	background: var(--dark-grey);
-	color: var(--white);
-}
-.sched-break {
-	background: var(--light-orange);
-}
-.sched-impt {
-	background: var(--rose);
-}
-.hidden {
-	display: none;
-}
+
 
 
 /*------ About Taipei -----*/
@@ -1090,27 +1113,6 @@ label {
 	height: 300px;
 	background: url('../assets/img/taipei6.jpeg');
 	background-size: cover;
-}
-
-
-/*------ CONFERENCE SCHEDULE ------*/
-.schedule-header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 30px;
-}
-
-.sched-table {
-	width: 95%;
-	margin: 0 auto;
-}
-th {
-	text-align: left;
-}
-.table-time {
-	width: 20%;
 }
 
 

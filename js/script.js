@@ -70,14 +70,14 @@ for (i = 0; i < acc.length; i++) {
     var carat = this.childNodes[1];
     var panel = this.nextElementSibling;
 
-    if (panel.classList.contains('open-panel')) {
-      	panel.classList.remove('open-panel');
+    if (panel.classList.contains('panel--open')) {
+      	panel.classList.remove('panel--open');
       	panel.style.maxHeight = null;
       	carat.classList.toggle("active");	
     } else {
     	var panelHeight = panel.scrollHeight + 80;
 	    panel.style.maxHeight = panelHeight + "px";
-	    panel.classList.add('open-panel');
+	    panel.classList.add('panel--open');
 	    carat.classList.toggle("active");
     } 
   });
