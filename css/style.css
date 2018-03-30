@@ -495,10 +495,10 @@ a {
 .details--date, .details--venue {
 	display: flex;
 	align-items: center;
-	background-color: var(--white);
-	color: var(--grey-text);
+	color: var(--white);
 	font-size: 25px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 700;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -507,6 +507,7 @@ a {
 
 .details--date > .fa , .details--venue > .fa {
 	margin-right: 30px;
+	font-size: 40px;
 }
 
 .details--date > .fa-calendar-check-o {
@@ -527,7 +528,7 @@ a {
 
 .section--speakers__grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 550px));
 	grid-template-rows: repeat(2, minmax(250px, 1fr));
 	grid-gap: 15px;
 	margin-top: 40px;
@@ -841,10 +842,6 @@ footer a::after {
 	left: 0;
 }
 
-.footer-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-}
 
 .fa-map-marker {
 	margin-right: 10px;
