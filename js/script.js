@@ -53,20 +53,20 @@ function stickyNavHandler(e) {
 	const navbarLogo = document.querySelector('.nav__logo');
 	const sticky = navbar.offsetTop;
 	if(window.pageYOffset > sticky) {
-		navbar.classList.add("sticky-nav");
-		navbarLogo.classList.add("sticky-logo");
+		navbar.classList.add('sticky-nav');
+		navbarLogo.classList.add('sticky-logo');
 	}
 	else {
-		navbar.classList.remove("sticky-nav");
-		navbarLogo.classList.remove("sticky-logo");
+		navbar.classList.remove('sticky-nav');
+		navbarLogo.classList.remove('sticky-logo');
 	}
 }
 
 // Schedule Accordion
-var acc = document.querySelectorAll(".accordion-switch");
+var acc = document.querySelectorAll('.accordion-switch');
 var i;
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener('click', function() {
     var carat = this.childNodes[1];
     var panel = this.nextElementSibling;
 
