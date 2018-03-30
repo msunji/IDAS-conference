@@ -401,10 +401,10 @@ nav ul {
 	height: inherit;
 	width: 100%;
 	position: absolute;
-	z-index: 1;
 }
 .slide-overlay .content {
 	display: flex;
+	z-index: 1;
 }
 .event-summary-details {
 	margin: auto;
