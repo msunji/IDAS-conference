@@ -12,7 +12,7 @@
 
  * 03 - PAGE LAYOUT
  ** 3.1 - Alignment
- ** 3.2 - Grid
+ ** 3.2 - Grid & Flexbox
 
  * 04 - NAVIGATION
  ** 4.1 - Desktop Nav Bar
@@ -165,7 +165,7 @@ a {
 }
 
 /*********************************************/
-/* 		3.2 - CSS GRID   				     */
+/* 		3.2 - CSS GRID & FLEXBOX  		     */
 /*********************************************/
 
 .two-column {
@@ -174,11 +174,17 @@ a {
 	grid-gap: 40px;
 }
 
-.align-center {
+.flex {
 	display: flex;
+}
+
+.align-center {
 	align-items: center;
 }
 
+.space-between {
+	justify-content: space-between;
+}
 /*********************************************/
 /*											 */
 /* 		04 - NAVIGATION   		             */
@@ -680,10 +686,10 @@ a {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom;
-	display: flex;
 }
 
-#newsletter-form input[type=email] {
+#newsletter__form input[type=email] {
+	width: 300px;
 	margin-bottom: 0;
 	margin-right: 10px;
 }
@@ -1003,21 +1009,6 @@ label {
 
 [dir="rtl"] .slick-next:before { 
 	content: "\f053"; 
-}
-
-
-/*------ Event Speakers -----*/
-
-
-.speaker-detailed {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-gap: 30px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-.speaker-detailed-bio {
-	margin: auto;
 }
 
 
