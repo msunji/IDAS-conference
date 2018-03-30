@@ -38,8 +38,8 @@
 
  *** 6.3 - Secondary Pages
  **** 6.3a - Panels
- **** 6.4a - Speakers
- **** 6.5.a - Schedule
+ **** 6.3b - Speakers
+ **** 6.3c - Schedule
 
  * 07 - FOOTER
 
@@ -725,6 +725,39 @@ a {
 /* 		6.3b - SPEAKERS PAGE  		  	     */
 /*********************************************/
 
+#page--speakers {
+	background: var(--light-grey);
+}
+
+#page--speakers__container {
+	background: var(--dark-blue);
+}
+
+#page--speakers__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+.page--speakers__info {
+	background: var(--white);
+	grid-template-columns: 1fr;
+	grid-template-rows: 250px 1fr;
+	height: auto;
+	margin-bottom: 40px;
+}
+
+.page--speakers__img {
+	height: 250px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.page--speakers__bio {
+	padding: 15px 40px 40px 40px;
+}
+
 
 /*********************************************/
 /* 		6.3c - SCHEDULE PAGE  		  	     */
@@ -973,15 +1006,9 @@ label {
 }
 
 
-/*----- SECTIONS --------*/
-/*----- Event Summary ---*/
-
-
 /*------ Event Speakers -----*/
 
-.speakers-page-intro {
-	background: var(--light-grey);
-}
+
 .speaker-detailed {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -993,33 +1020,6 @@ label {
 	margin: auto;
 }
 
-/*------ Speakers -- ALTERNATIVE ----*/
-.speaker-info {
-	margin-bottom: 40px;
-}
-.detailed-speakers-alt-container {
-	background: var(--dark-blue);
-}
-
-.detailed-speakers-alt-container .content {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-    grid-gap: 40px;
-    justify-content: center;
-}
-.speakers-page-alt {
-	background: var(--white);
-}
-.info-alt {
-	grid-template-columns: 1fr;
-	grid-template-rows: 250px 1fr;
-	height: auto;
-}
-.speaker-photo-main {
-	height: 250px;
-	width: 100%;
-	object-fit: cover;
-}
 
 /*------ Important Dates ----*/
 #event-schedule {
