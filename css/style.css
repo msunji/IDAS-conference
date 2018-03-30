@@ -515,7 +515,7 @@ nav ul {
 	background: url('../assets/img/profile4.png');
 }
 .speaker-photo {
-	background-color: var(--light-grey);
+	background-color: var(--dark-grey);
 	background-size: auto;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -581,8 +581,13 @@ nav ul {
 }
 .info-alt {
 	grid-template-columns: 1fr;
-	grid-template-rows: 200px 1fr;
+	grid-template-rows: 250px 1fr;
 	height: auto;
+}
+.speaker-photo-main {
+	height: auto;
+	width: 100%;
+	object-fit: cover;
 }
 
 /*------ Important Dates ----*/
