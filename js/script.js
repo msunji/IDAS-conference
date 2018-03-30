@@ -1,7 +1,7 @@
 const navLinks = document.querySelectorAll('.nav-link');
-const ctaLinks = document.querySelectorAll('.cta-button-nav');
-const dropdownDesktop= document.querySelectorAll('.dropdown-link');
-const dropDown = document.querySelectorAll('.dropdown-desktop');
+const ctaLinks = document.querySelectorAll('.jumbotron__btn');
+const dropdownDesktop= document.querySelectorAll('.dropdown-switch');
+const dropDown = document.querySelectorAll('.dropdown--desktop');
 const carats = document.querySelectorAll('.down-carat');
 const showHideButton = document.querySelector('.show-panels');
 
@@ -49,8 +49,8 @@ function dropdownHandlerDesktop(e) {
 
 // Sticky navbar
 function stickyNavHandler(e) {
-	const navbar = document.querySelector('.main-nav');
-	const navbarLogo = document.querySelector('.nav-logo > img');
+	const navbar = document.querySelector('.desktop-nav');
+	const navbarLogo = document.querySelector('.nav__logo');
 	const sticky = navbar.offsetTop;
 	if(window.pageYOffset > sticky) {
 		navbar.classList.add("sticky-nav");

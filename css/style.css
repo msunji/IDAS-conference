@@ -175,6 +175,7 @@ a {
 }
 
 .align-center {
+	display: flex;
 	align-items: center;
 }
 
@@ -188,7 +189,7 @@ a {
 /* 		4.1 - DESKTOP NAV BAR           	 */
 /*********************************************/
 
-.main-nav {
+.desktop-nav {
 	position: absolute;
 	z-index: 999;
 	top: 0;
@@ -206,7 +207,7 @@ a {
 	transition: background 0.3s ease-in-out;
 }
 
-.nav-content {
+.nav__content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -215,11 +216,11 @@ a {
     width: 90%;
 }
 
-.nav-logo > img {
+.nav__logo {
 	display: flex;
 }
 
-.desktop-nav {
+.desktop-nav__links {
 	display: flex;
 	letter-spacing: 0.3px;
 	list-style: none;
@@ -230,19 +231,28 @@ a {
 	font-size: 13px;
 }
 
-.desktop-nav li:not(:last-child) {
+.desktop-nav__links li:not(:last-child) {
 	margin-right: 50px;
 }
 
-.main-link {
+.desktop-nav__links li a:hover::after {
+	transform: scaleX(1);
+   -webkit-transform: scaleX(1);
+   -ms-transform: scaleX(1);
+}
+
+.desktop-nav__links > li > a {
+	font-weight: 700;
+}
+
+.nav__link {
 	color: var(--white);
 	text-decoration: none;
 	position: relative;
 	display: inline;
-	font-weight: 700;
 }
 
-.main-link::after {
+.desktop-nav__links > li > a::after {
 	content: '';
 	height: 3px;
 	width: 100%;
@@ -259,12 +269,6 @@ a {
 	transition: transform 250ms ease-in-out;
 }
 
-.desktop-nav li a:hover::after {
-	transform: scaleX(1);
-   -webkit-transform: scaleX(1);
-   -ms-transform: scaleX(1);
-}
-
 .dropdown-menu {
 	margin-top: 10px;
 	position: absolute;
@@ -275,7 +279,7 @@ a {
 	display: none;
 }
 
-.dropdown-desktop {
+.dropdown--desktop {
 	padding-left: 0;
 	list-style-type: none;
 }
@@ -289,7 +293,7 @@ a {
 }
 
 .dropdown-menu::before {
-    content: "";
+    content: '';
     position: absolute;
    	left: 11px;
     top: -10px;
@@ -367,6 +371,9 @@ a {
 /* 		4.3 - MOBILE NAV  		          	 */
 /*********************************************/
 
+.mobile-nav {
+	display: none;
+}
 
 /*********************************************/
 /*											 */
@@ -374,6 +381,11 @@ a {
 /*											 */
 /*********************************************/
 
+.call-papers-image {
+	max-width: 70%;
+	display: block;
+	margin: auto;
+}
 
 /*********************************************/
 /*											 */
@@ -387,10 +399,7 @@ a {
 
 .jumbotron {
 	height: 500px;
-/*	background: linear-gradient(rgba(38,102,245,0.66),rgba(189,189,189,0.5)), url('../assets/img/remi-yuan-taipei101.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-*/}
+}
 
 .slide-overlay, .slide-overlay .content  {
 	padding: 0;
@@ -404,35 +413,36 @@ a {
 	z-index: 1;
 }
 
-.event-summary-details {
+.jumbotron__text {
 	margin: auto;
 	text-align: center;
 }
 
-.date-time {
+.jumbotron__date-time {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	margin-bottom: 30px;
 }
 
-.date-time h2 {
+.jumbotron__date-time h2 {
 	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-.date-time h2:first-of-type {
+.jumbotron__date-time h2:first-of-type {
 	margin-right: 30px;
 }
 
-/*----- Event Summary CTAs ------*/
-.detail-ctas {
+/*****  JUMBOTRON CTA BUTTONS  ***************/
+
+.jumbotron___ctas {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 }
-.detail-ctas a:first-of-type {
+.jumbotron___ctas a:first-of-type {
 	margin-right: 50px;
 }
 
@@ -446,7 +456,7 @@ a {
 /* 		6.2a - EVENT INTRO				     */
 /*********************************************/
 
-.event-description {
+#section--intro {
 	background: var(--white);
 }
 
@@ -463,20 +473,22 @@ a {
 /* 		6.2b - DATE & VENUE				     */
 /*********************************************/
 
-#event-date-venue {
+#section--date-venue {
 	background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url('../assets/img/nccu-mainentrance.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0 19px 42px -6px rgba(45, 45, 45, 0.2);
 }
 
-.event-details {
+.date-venue-details {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 40px;
 }
 
-.event-details div {
+.details--date, .details--venue {
+	display: flex;
+	align-items: center;
 	background-color: var(--white);
 	color: var(--grey-text);
 	font-size: 25px;
@@ -487,20 +499,15 @@ a {
     padding: 20px 30px 20px 30px;
 }
 
-.event-details-date, .event-details-time {
-	display: flex;
-	align-items: center;
-}
-
-.event-details-date > .fa , .event-details-time > .fa {
+.details--date > .fa , .details--venue > .fa {
 	margin-right: 30px;
 }
 
-.event-details-date > .fa-calendar-check-o {
+.details--date > .fa-calendar-check-o {
 	color: var(--yellow-orange);
 }
 
-.event-details-time > .fa-map-marker {
+.details--venue > .fa-map-marker {
 	color: var(--pink);
 }
 
@@ -508,30 +515,75 @@ a {
 /* 		6.2c - SPEAKERS SECTION    			 */
 /*********************************************/
 
+#section--speakers {
+	background: var(--dark-grey);
+}
+
+.section--speakers__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+	grid-template-rows: repeat(2, minmax(250px, 1fr));
+	grid-gap: 15px;
+	margin-top: 40px;
+	justify-content: center;
+}
+
+.section--speaker__info {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 200px 2fr;
+	height: 250px;
+	background-color: var(--white);
+}
+
+.section--speaker__img {
+	width: 200px;
+	height: 250px;
+	object-fit: cover;
+}
+.section--speaker__bio {
+	padding: 20px 30px 20px 0;
+	margin-left: 30px;
+	align-self: center;
+	max-height: inherit;
+}
+.section--speaker__name {
+	margin-top: 0px;
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	display: inline;
+}
+.section--speaker__name::after {
+	content: '';
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: var(--yellow-orange);
+}
 
 /*********************************************/
 /* 		6.2d - PANELS SECTION  		 		 */
 /*********************************************/
 
+#section--panels {
+	background: var(--light-grey);
+}
 
 /*********************************************/
 /* 		6.2e - CALL FOR PAPERS  			 */
 /*********************************************/
 
-#call-for-papers > .content {
+#section--call-for-papers > .content {
 	display: grid;
 	align-items: center;
 	grid-gap: 40px;
 	grid-template-columns: 1fr 40%;
 }
 
-.call-papers-image > img {
-	max-width: 70%;
-	display: block;
-	margin: auto;
-}
-
-#call-for-papers > .content > div > p:last-of-type {
+#section--call-for-papers > .content > div > p:last-of-type {
 	margin-bottom: 40px;
 }
 
@@ -540,22 +592,22 @@ a {
 /* 		6.2f - IMPORTANT DATES  			 */
 /*********************************************/
 
-.event-timeline {
+.impt-dates__timeline {
 	padding-left: 0;
 	list-style-type: none;
 	margin-left: 40px;
 }
-.event-timeline li {
+.impt-dates__timeline li {
 	position: relative;
 	width: 5px;
 	margin-left: 30%;
 	padding-top: 50px;
 	background: var(--white);
 }
-.event-timeline li:nth-last-child(2) {
+.impt-dates__timeline li:nth-last-child(2) {
 	padding-bottom: 50px;
 }
-.event-timeline li:last-child {
+.impt-dates__timeline li:last-child {
 	padding-top: 0;
 	background: transparent;
 }
@@ -571,13 +623,13 @@ a {
 	background: inherit;
 }*/
 
-.event-group {
+.timeline__event {
 	width: 500px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
-.event-time {
+.timeline__date {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -589,11 +641,11 @@ a {
 	padding: 10px;
 	font-family: 'Montserrat', sans-serif;
 }
-.event-date-day {
+.timeline__day {
 	font-size: 35px;
 	font-weight: 800;
 }
-.event-content {
+.timeline__desc {
     background: var(--white);
     padding: 20px;
     margin-left: 60px;
@@ -611,7 +663,7 @@ a {
 /* 		6.2h - CONTACT US 		 			 */
 /*********************************************/
 
-.contact-us {
+#section--contact {
 	background: var(--dark-blue);
 }
 
@@ -623,22 +675,12 @@ a {
 /* 		6.2i - NEWSLETTER  			 		 */
 /*********************************************/
 
-.event-newsletter {
+#section--newsletter {
 	background: url('../assets/img/mailing-list-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom;
-}
-
-.newsletter-container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#newsletter-form {
-	display: flex;
-	flex-direction: row;
 }
 
 #newsletter-form input[type=email] {
@@ -739,12 +781,10 @@ footer a::after {
 /* 		8.1 - BUTTONS 	 		           	 */
 /*********************************************/
 
-.cta {
+.btn {
 	border: none;
 	text-decoration: none;
 	padding: 10px 30px 10px 30px;
-	background-color: var(--pink);
-	color: white;
 	text-transform: uppercase;
 	-webkit-transition: all 0.4s ease-in;
 	-moz-transition: all 0.4s ease-in;
@@ -752,17 +792,22 @@ footer a::after {
 	transition: all 0.4s ease-in;
 }
 
-.cta-border {
-	border: none;
-	text-decoration: none;
-	padding: 10px 30px 10px 30px;
+.btn--pink {
 	background-color: var(--pink);
 	color: white;
-	text-transform: uppercase;
-	transition: all 0.4s ease-out;
 }
 
-.cta-border:hover {
+.btn--pink:hover {
+	background-color: var(--white);
+	color: var(--pink);
+}
+
+.btn--pink--border {
+	background-color: var(--pink);
+	color: white;
+}
+
+.btn--pink--border:hover {
     -webkit-box-shadow:inset 0px 0px 0px 2px var(--pink);
     -moz-box-shadow:inset 0px 0px 0px 2px var(--pink);
     box-shadow:inset 0px 0px 0px 2px var(--pink);
@@ -770,25 +815,12 @@ footer a::after {
 	color: var(--pink);
 }
 
-.cta:hover {
-	background-color: var(--white);
-	color: var(--pink);
-}
-
-.submit-button {
-	text-decoration: none;
-	padding: 10px 30px 10px 30px;
+.btn--green {
 	background-color: var(--green);
 	color: white;
-	text-transform: uppercase;
-	-webkit-transition: all 0.4s ease-out;
-	-moz-transition: all 0.4s ease-out;
-	-o-transition: all 0.4s ease-out;
-	transition: all 0.4s ease-out;
-	border: none;
 }
 
-.submit-button:hover {
+.btn--green:hover {
     -webkit-box-shadow:inset 0px 0px 0px 2px var(--green);
     -moz-box-shadow:inset 0px 0px 0px 2px var(--green);
     box-shadow:inset 0px 0px 0px 2px var(--green);
@@ -946,64 +978,7 @@ label {
 
 
 /*------ Event Speakers -----*/
-#event-speakers {
-	background: var(--dark-grey);
-}
-.speakers-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(2, minmax(250px, 1fr));
-	grid-gap: 15px;
-	margin-top: 40px;
-}
-.speaker-info {
-	overflow: hidden;
-	display: grid;
-	grid-template-columns: 200px 2fr;
-	height: 250px;
-	background-color: var(--white);
-}
 
-.speaker-1 {
-	background: url('../assets/img/profile1.png');
-}
-.speaker-2 {
-	background: url('../assets/img/profile2.png');
-}
-.speaker-3 {
-	background: url('../assets/img/profile3.png');
-}
-.speaker-4 {
-	background: url('../assets/img/profile4.png');
-}
-.speaker-photo {
-	background-color: var(--dark-grey);
-	background-size: auto;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.speaker-bio {
-	padding: 20px 30px 20px 0;
-	margin-left: 30px;
-	align-self: center;
-	max-height: inherit;
-}
-.speaker-bio h2 {
-	margin-top: 0px;
-	position: relative;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
-	display: inline;
-}
-.speaker-bio h2::after {
-	content: '';
-	position: absolute;
-	top: 110%;
-	left: 0;
-	width: 100%;
-	height: 4px;
-	background: var(--yellow-orange);
-}
 .speakers-page-intro {
 	background: var(--light-grey);
 }
@@ -1085,12 +1060,6 @@ label {
 .hidden {
 	display: none;
 }
-
-/*------ Panels ----*/
-#event-panels {
-	background: var(--light-grey);
-}
-
 
 
 /*------ About Taipei -----*/
