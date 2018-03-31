@@ -49,6 +49,8 @@
  ** 8.3 Accordions
  ** 8.4 Slider
 
+ * 09 - MEDIA QUERIES
+
 **/
 
 
@@ -607,73 +609,107 @@ a {
 
 
 /*********************************************/
-/* 		6.2f - IMPORTANT DATES  			 */
+/* 		6.2f - IMPORTANT DATES / TIMELINE  	 */
 /*********************************************/
 
 #section--timeline {
 	background: var(--dark-blue);
-}
-.impt-dates__timeline {
-	padding-left: 0;
-	list-style-type: none;
-	margin-left: 40px;
-}
-.impt-dates__timeline li {
-	position: relative;
-	width: 5px;
-	margin-left: 30%;
-	padding-top: 50px;
-	background: var(--white);
-}
-.impt-dates__timeline li:nth-last-child(2) {
-	padding-bottom: 50px;
-}
-.impt-dates__timeline li:last-child {
-	padding-top: 0;
-	background: transparent;
+	overflow: hidden;
 }
 
-/*.event-timeline li::after {
-	content: '';
-	position: absolute;
-	top: 40%;
-	left: 100%;
-	transform: translateX(50%);
-	width: 40px;
-	height: 5px;
-	background: inherit;
-}*/
-
-.timeline__event {
-	width: 500px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-}
-.timeline__date {
+.timeline__container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+	min-height: 200px;
+}
+
+.timeline__event {
+	position: relative;
+	background: white;
+	width: 110px;
+	padding: 10px;
+	margin-bottom: 50px;
+	align-self: flex-start;
+}
+
+.timeline__event {
+	cursor: pointer;
+	background: white;
+}
+
+.timeline__event:not(:last-child)::after {
+	content: '';
+	width: 5px;
+	background: white;
 	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
-	background: white;
-	padding: 10px;
-	font-family: 'Montserrat', sans-serif;
+	top: 100%;
+	height: 50px;
+	z-index: -1;
 }
+
+.timeline-event__date {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-event__desc {
+	background: var(--yellow-orange);
+	position: absolute;
+	width: 150%;
+	right: -180%;
+	top: 0px;
+	padding: 10px;	
+}
+
+.timeline-event__desc::before {
+	content: '';
+ 	position: absolute;
+	left: -13px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 14px 8px 0;
+	border-color: transparent var(--yellow-orange) transparent transparent;
+	z-index: 2;  
+}
+
+.event--active {
+	background: var(--yellow-orange); 
+}
+
+.event--hide {
+	display: none;
+}
+
+.timeline-event__date {
+	display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .timeline__day {
-	font-size: 35px;
-	font-weight: 800;
+	margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
 }
-.timeline__desc {
-    background: var(--white);
-    padding: 20px;
-    margin-left: 60px;
+
+.timeline__month {
+	text-transform: uppercase;
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
 }
-.event-name {
-	margin-top: 0;
-}
+
 
 /*********************************************/
 /* 		6.2g - REGISTRATION 	  			 */
@@ -1077,22 +1113,58 @@ label {
 	content: "\f053"; 
 }
 
+/*********************************************/
+/*											 */
+/* 		09 -  MEDIA QUERIES 	 		     */
+/*											 */
+/*********************************************/
 
-/*------ Important Dates ----*/
-#event-schedule {
-	background-color: var(--dark-blue);
+@media screen and (min-width: 900px) {
+
+	.timeline__container {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.timeline__event {
+		margin-bottom: 0px;
+	}
+
+	.timeline__event:not(:last-child) {
+		margin-right: 80px;
+	}
+
+	.timeline__event:not(:last-child)::after {
+	    content: '';
+	    height: 4px;
+	    background: white;
+	    position: absolute;
+	    width: 90px;
+	    top: 50%;
+	    left: 60px;
+	}
+
+	.timeline-event__desc {
+		position: absolute;
+    	width: 150%;
+    	left: -25%;
+    	top: 120%;
+    	padding: 10px;
+	}
+
+	.timeline-event__desc::before {
+		content: '';
+	    position: absolute;
+	   	left: 50%;
+	    top: -9px;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 10px 10px 10px;
+	    border-color: transparent transparent var(--yellow-orange) transparent;
+	    z-index: 9;  
+	}
 }
-.day-title {
-	background-color: var(--sky-blue);
-	padding: 10px;
-	color: var(--white);
-	display: flex;
-	justify-content: space-between;
-	margin-top: 3px;
-	margin-bottom: 0;
-}
-
-
 
 /*------ About Taipei -----*/
 #about-taiwan {
