@@ -27,8 +27,8 @@
 						<li>
 							<a href="#" class="nav__link dropdown-switch"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 							<ul class="dropdown-menu dropdown--desktop" id="about-dropdown">
-								<li><a class="nav__link" href="#event-date-venue">Date and Venue</a></li>
-								<li><a class="nav__link" href="#event-schedule">Important Dates</a></li>
+								<li><a class="nav__link" href="#section--date-venue">Date and Venue</a></li>
+								<li><a class="nav__link" href="#section--timeline">Important Dates</a></li>
 								<li><a class="nav__link" href="#about-taiwan">About Taipei</a></li>
 							</ul>
 						</li>
@@ -40,10 +40,10 @@
 								<li><a class="nav__link" href="schedule.html">Schedule</a></li>
 							</ul>
 						</li>
-						<li><a class="nav__link" href="#call-for-papers">Call for Abstract/Papers</a></li>
-						<li><a class="nav__link" href="#event-registration">Registration</a></li>
+						<li><a class="nav__link" href="#section--call-for-papers">Call for Abstract/Papers</a></li>
+						<li><a class="nav__link" href="#section--registration">Registration</a></li>
 						
-						<li><a class="nav__link" href="#event-contact">Contact</a></li>
+						<li><a class="nav__link" href="#section--contact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -99,14 +99,16 @@
 		<div class="content white-text">
 			<h1 class="center-text">Date and Venue</h1>
 			<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			<div class="date-venue-details">
-				<div class="details--date">
+			<div class="date-venue__container">
+				<div class="date__details date-venue__details">
 					<i class="fa fa-lg fa-calendar-check-o" aria-hidden="true"></i>
 					<p>November 23-25, 2018</p>
+					<a class="btn btn--sm btn--green venue__button" href="accommodations.html">Find hotels in the area</a>
 				</div>
-				<div class="details--venue">
+				<div class="venue__details date-venue__details">
 					<i class="fa fa-lg fa-map-marker" aria-hidden="true"></i>
-					<p>National Chengchi University,<br />Taipei</p>
+					<p class="">National Chengchi University,<br />Taipei</p>
+					<a class="btn btn--sm btn--green venue__button" href="directions.html">Get Directions to NCCU</a>
 				</div>
 			</div>
 		</div>
@@ -178,8 +180,97 @@
 		</div>
 	</section>
 
+	<!-- Important Dates -->
+	<section class="section" id="section--timeline">
+		<div class="content">
+			<h1 class="center-text white-text">Important Dates</h1>
+			<p class="center-text white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<ul class="impt-dates__timeline">
+				<li>
+					<div class="timeline__event">
+						<div class="timeline__date">
+							<div class="timeline__day">12</div>
+							<div class="timeline__month">April</div>
+						</div>
+						<div class="event-content">
+							<h2 class="event-name">Event 1</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline__event">
+						<div class="timeline__date">
+							<div class="timeline__day">12</div>
+							<div class="timeline__month">April</div>
+						</div>
+						<div class="event-content">
+							<h2 class="event-name">Event 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline__event">
+						<div class="timeline__date">
+							<div class="timeline__day">12</div>
+							<div class="timeline__month">April</div>
+						</div>
+						<div class="timeline__desc">
+							<h2 class="event-name">Event 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline__event">
+						<div class="timeline__date">
+							<div class="timeline__day">12</div>
+							<div class="timeline__month">Nov</div>
+						</div>
+						<div class="timeline__desc">
+							<h2 class="event-name">Event 4</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline__event">
+						<div class="timeline__date">
+							<div class="timeline__day">12</div>
+							<div class="timeline__month">April</div>
+						</div>
+						<div class="timeline__desc">
+							<h2 class="event-name">Event 5</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="timeline__event">
+						<div class="timeline__date">
+							<div class="timeline__day">12</div>
+							<div class="timeline__month">April</div>
+						</div>
+						<div class="timeline__desc">
+							<h2 class="event-name">Event 6</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
 
 
+
+		<!-- About Taipei -->
+	<section class="section" id="section--about-tw">
+		<div class="content">
+			<h1 class="center-text">About Taiwan</h1>
+			<p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</section>
 
 	<!-- Registration -->
 	<section class="section" id="section--registration">
@@ -288,6 +379,11 @@
 			</div>
 			<div class="footer__logos">
 				<h2>Related Links</h2>
+				<div class="footer__logos__container">
+					<img src="assets/img/nccu-logo-sm.png" alt="National Chengchi University">
+					<img src="assets/img/idas-logo-sm.png" alt="International Doctorate Program in Asia-Pacific Studies, NCCU">
+					<img src="assets/img/temp-css-logo.png" alt="International Doctorate Program in Asia-Pacific Studies, NCCU">
+				</div>
 			</div>
 		</div>
 	</footer>
