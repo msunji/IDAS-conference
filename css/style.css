@@ -539,8 +539,8 @@ a {
 
 .section--speakers__grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 550px));
-	grid-template-rows: repeat(2, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+	grid-template-rows: repeat(2, minmax(200px, 1fr));
 	grid-gap: 15px;
 	margin-top: 40px;
 	justify-content: center;
@@ -549,14 +549,14 @@ a {
 .section--speaker__info {
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: 200px 2fr;
-	height: 250px;
+	grid-template-columns: 150px 2fr;
+	height: 200px;
 	background-color: var(--white);
 }
 
 .section--speaker__img {
-	width: 200px;
-	height: 250px;
+	width: 150px;
+	height: 200px;
 	object-fit: cover;
 }
 .section--speaker__bio {
