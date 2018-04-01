@@ -541,10 +541,11 @@ a {
 
 .section--speakers__grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+	max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
 	grid-template-rows: repeat(2, minmax(200px, 1fr));
 	grid-gap: 15px;
-	margin-top: 40px;
+	margin: 40px auto 0 auto;
 	justify-content: center;
 }
 
@@ -645,6 +646,19 @@ a {
     align-items: center;
 }
 
+.timeline-event__desc::before {
+  content: '';
+  position: absolute;
+  left: -13px;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 14px 8px 0;
+  border-color: transparent var(--yellow-orange) transparent transparent;
+  z-index: 10;  
+}
+
 .timeline-event__desc {
 	background: var(--yellow-orange);
 	position: absolute;
@@ -653,14 +667,8 @@ a {
 	top: 0px;
 	padding: 10px;
 	text-align: center;
-}
-
-.event--active {
-	background: var(--yellow-orange); 
-}
-
-.event--hide {
-	display: none;
+	font-weight: 500;
+    font-size: 17px;
 }
 
 .timeline-event__date {
@@ -669,6 +677,7 @@ a {
     height: 60px;
     justify-content: space-between;
     align-items: center;
+    color: var(--dark-blue);
 }
 
 .timeline__day {
@@ -683,6 +692,7 @@ a {
     margin: 0;
     font-size: 20px;
     line-height: 20px;
+    font-weight: 700;
 }
 
 
@@ -1094,6 +1104,12 @@ label {
 /*											 */
 /*********************************************/
 
+@media screen and (min-width: 460px) and (max-width: 900px) {
+	.timeline__container {
+		margin-left: 20%;
+	}
+}
+
 @media screen and (min-width: 900px) {
 
 	.timeline__container {
@@ -1108,13 +1124,27 @@ label {
 	.timeline__event:not(:last-child) {
 		margin-right: 80px;
 	}
-	
+
 	.timeline-event__desc {
 		position: absolute;
     	width: 150%;
     	left: -25%;
     	top: 120%;
     	padding: 10px;
+	}
+	
+	.timeline-event__desc::before {
+    	content: '';
+    	position: absolute;
+   		left: 40%;
+    	top: -9px;
+    	width: 0;
+   		height: 0;
+    	border-style: solid;
+    	border-width: 0 10px 10px 10px;
+    	border-color: transparent transparent var(--yellow-orange) transparent;
+    	z-index: 2;  
+
 	}
 }
 
