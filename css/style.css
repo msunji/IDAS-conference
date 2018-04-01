@@ -7,8 +7,8 @@
  * 01 - VARIABLES & BASIC STUFF
 
  * 02 - TYPOGRAPHY
- ** 2.1 - Colours and Embellishments
- ** (like underlines and stuff)
+ ** 2.1 - Links
+ ** 2.2 - Colours and Text Decoration
 
  * 03 - PAGE LAYOUT
  ** 3.1 - Alignment
@@ -33,8 +33,9 @@
  **** 6.2f - Important Dates
  **** 6.2g - Registration
  **** 6.2h - Contact Us
- **** 6.2i - Newsletter
- **** 6.2j - Sponsors
+ **** 6.2i - Organisers
+ **** 6.2j - Newsletter
+ **** 6.2k - Sponsors
 
  *** 6.3 - Secondary Pages
  **** 6.3a - Panels
@@ -66,7 +67,7 @@
 :root {
 	--white: #fff;
 	--grey-text: #525151;
-	--light-grey: #f9f9f9;
+	--light-grey: #ececec;
 	--dark-grey: #212425;
 	--dark-blue: #2a4273;
 	--sky-blue: #419df3;
@@ -121,20 +122,37 @@ h2 {
 
 .section {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 /*********************************************/
 /* 		2.1 - LINKS  					     */
 /*********************************************/
 
-a {
-	color: var(--pink);
+a, a:visited {
+	text-decoration: none;
+	font-weight: 700;
 }
 
+.link--blue {
+	color: var(--sky-blue);
+}
+
+.link--blue:hover {
+	border-bottom: solid 1px var(--sky-blue);
+}
+
+.link--white {
+	color: var(--white);
+}
+
+.link--white:hover {
+	border-bottom: solid 1px var(--white);
+}
+
+
+
 /*********************************************/
-/* 		2.1 - COLOURS & TEXT DECORATION		 */
+/* 		2.2 - COLOURS & TEXT DECORATION		 */
 /*********************************************/
 
 .white-text {
@@ -154,6 +172,8 @@ a {
 /*********************************************/
 
 .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -714,7 +734,19 @@ a {
 }
 
 /*********************************************/
-/* 		6.2i - NEWSLETTER  			 		 */
+/* 		6.2i - Organisers 		 			 */
+/*********************************************/
+
+#section--organisers {
+	padding: 0;
+	background: var(--dark-blue);
+	background: url('../assets/img/team.jpeg');
+	background-size: cover;
+	height: 350px;
+}
+
+/*********************************************/
+/* 		6.2j - NEWSLETTER  			 		 */
 /*********************************************/
 
 #section--newsletter {
@@ -732,7 +764,7 @@ a {
 }
 
 /*********************************************/
-/* 		6.2j - SPONSORS 					 */
+/* 		6.2k - SPONSORS 					 */
 /*********************************************/
 
 .logos-list {
@@ -862,23 +894,6 @@ footer {
 	background-color: var(--dark-grey);
 }
 
-footer a {
-	color: var(--white);
-	text-decoration: none;
-	position: relative;
-}
-
-footer a::after {
-	content: '';
-	position: absolute;
-	background: var(--sky-blue);
-	width: 100%;
-	height: 4px;
-	top: 110%;
-	left: 0;
-}
-
-
 .fa-map-marker {
 	margin-right: 10px;
 }
@@ -934,12 +949,17 @@ footer a::after {
 	color: var(--pink);
 }
 
-.btn--green {
+.btn--green, .btn--green--border {
 	background-color: var(--green);
 	color: white;
 }
 
 .btn--green:hover {
+	background-color: var(--white);
+	color: var(--green);
+}
+
+.btn--green--border:hover {
     -webkit-box-shadow:inset 0px 0px 0px 2px var(--green);
     -moz-box-shadow:inset 0px 0px 0px 2px var(--green);
     box-shadow:inset 0px 0px 0px 2px var(--green);
