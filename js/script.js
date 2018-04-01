@@ -64,21 +64,6 @@ function stickyNavHandler(e) {
 	}
 }
 
-// Timeline Handler
-
-function showEvent(e) {
-  var description = this.childNodes[3];
-  console.log(description);
-  if(description.classList.contains('event--hide')) {
-    description.classList.remove('event--hide');
-    this.classList.add('event--active');
-  }
-  else {
-    description.classList.toggle('event--hide');
-    this.classList.toggle('event--active');
-  }
-}
-
 // Schedule Accordion
 var acc = document.querySelectorAll('.accordion-switch');
 var i;
@@ -113,8 +98,6 @@ for (i = 0; i < acc.length; i++) {
 // ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
 // showHideButton.addEventListener('click', showHideHandler);
 dropdownDesktop.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
-eventBox.forEach(box => {
-  box.addEventListener('click', showEvent);
-});
+
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);
