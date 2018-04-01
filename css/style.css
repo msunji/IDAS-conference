@@ -738,11 +738,24 @@ a, a:visited {
 /*********************************************/
 
 #section--organisers {
-	padding: 0;
-	background: var(--dark-blue);
+	background: var(--light-grey);
+	display: grid;
+	grid-template-areas:
+			"organiser"
+			"desc";
+	grid-template-rows: 300px 1fr;
+}
+
+.image--holder {
+	display: block;
+	grid-area: organiser;
 	background: url('../assets/img/team.jpeg');
 	background-size: cover;
-	height: 350px;
+	background-repeat: no-repeat;
+}
+
+.organisers__desc {
+	grid-area: desc;
 }
 
 /*********************************************/
@@ -1124,6 +1137,15 @@ label {
 /* 		09 -  MEDIA QUERIES 	 		     */
 /*											 */
 /*********************************************/
+
+@media screen and (min-width: 600px) {
+	#section--organisers {
+		grid-template-columns: 40% auto;
+		grid-template-areas: 
+			"organiser desc";
+		grid-template-rows: auto;
+	}
+}
 
 @media screen and (min-width: 460px) and (max-width: 900px) {
 	.timeline__container {
