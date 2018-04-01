@@ -725,7 +725,8 @@ a {
 }
 
 #newsletter__form input[type=email] {
-	width: 300px;
+	min-width: 200px;
+	max-width: 300px;
 	margin-bottom: 0;
 	margin-right: 10px;
 }
