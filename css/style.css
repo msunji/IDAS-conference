@@ -994,10 +994,16 @@ footer {
 }
 
 input[type="text"], input[type="email"] {
-	border: 1px solid var(--light-grey);
+	color: var(--sky-blue);
+	letter-spacing: 0.5px;
+	outline: none;
+	border: 1px solid var(--sky-blue);
 	padding: 10px;
 	margin-bottom: 10px;
 	width: 500px;
+}
+::placeholder {
+	color: var(--sky-blue);
 }
 
 label {
