@@ -4,7 +4,7 @@
 
 /**
 
- * 01 - VARIABLES & BASIC STUFF
+ * 01 - ROOT
 
  * 02 - TYPOGRAPHY
  ** 2.1 - Links
@@ -58,7 +58,7 @@
 
 /*********************************************/
 /*											 */
-/* 		01 - VARIABLES AND BASIC STUFF	     */
+/* 		01 - ROOT						     */
 /*											 */
 /*********************************************/
 
@@ -88,6 +88,10 @@ body, html {
 	height: 100%;
 }
 
+html {
+	font-size: 15px;
+}
+
 
 
 /*********************************************/
@@ -102,13 +106,13 @@ body {
 	-webkit-font-smoothing: antialiased; 
 	-moz-osx-font-smoothing: grayscale; 
 	font-weight: 300;
-	font-size: 15px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 h1 {
-	font-size: 34px;
-	line-height: 45px;
+	font-size: 2em;
+	line-height: 1.5em;
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-weight: 700;
 	margin-bottom: 10px;
@@ -118,6 +122,7 @@ h1 {
 
 h2 {
 	font-weight: 400;
+	font-size: 1.5em;
 }
 
 .section {
@@ -427,6 +432,7 @@ a, a:visited {
 
 .jumbotron {
 	height: 500px;
+	font-size: 1rem;
 }
 
 .slide-overlay, .slide-overlay .content  {
@@ -1197,6 +1203,17 @@ label {
 	}
 }
 
+@media screen and (max-width: 1030px) {
+	.jumbotron {
+		font-size: 0.8rem;
+	}
+	.desktop-nav__links {
+		font-size: 0.9em;
+	}
+	h1 {
+		font-size: 1.3em;
+	}
+}
 /*------ About Taipei -----*/
 #about-taiwan {
 	background-color: var(--light-grey);
