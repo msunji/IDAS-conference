@@ -818,6 +818,40 @@ a, a:visited {
 /* 		6.3a - PANELS PAGE  		  	     */
 /*********************************************/
 
+#page--panels {
+	background: var(--white);
+}
+
+#page--panels__container {
+	background: var(--light-grey);
+}
+
+#page--panels__grid {
+	display: flex;
+	flex-flow: row wrap;
+    justify-content: center;
+}
+
+.page--panels__info {
+	background: var(--white);
+	height: auto;
+	flex-basis: 30%;
+	margin-bottom: 40px;
+}
+
+.page--panels__info:not(:nth-child(3n)) {
+	margin-right: 30px;
+}
+
+.page--panels__img {
+	height: 250px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.page--panels__bio {
+	padding: 15px 40px 40px 40px;
+}
 
 /*********************************************/
 /* 		6.3b - SPEAKERS PAGE  		  	     */
@@ -1074,6 +1108,11 @@ label {
 	position: absolute;
 	left: 0;
 	top: 0;
+	visibility: hidden;
+}
+
+.slick-initialized {
+	visibility: visible;
 }
 
 .slick-list, .slick-track {
