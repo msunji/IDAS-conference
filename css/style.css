@@ -7,7 +7,8 @@
  * 01 - ROOT
 
  * 02 - TYPOGRAPHY
- ** 2.1 - Links
+ ** 2.1 - Buttons
+ ** 2.2 - Links
  ** 2.2 - Colours and Text Decoration
 
  * 03 - PAGE LAYOUT
@@ -45,7 +46,6 @@
  * 07 - FOOTER
 
  * 08 - MISC
- ** 8.1 Buttons
  ** 8.2 Forms
  ** 8.3 Accordions
  ** 8.4 Slider
@@ -111,7 +111,7 @@ body {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 1.3em;
 	line-height: 1.5em;
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-weight: 700;
@@ -122,11 +122,12 @@ h1 {
 
 h2 {
 	font-weight: 400;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .section {
     width: 100%;
+    font-size: 1em;
 }
 
 p {
@@ -134,7 +135,69 @@ p {
 }
 
 /*********************************************/
-/* 		2.1 - LINKS  					     */
+/* 		02.1 - BUTTONS 	 		           	 */
+/*********************************************/
+
+.btn {
+	border: none;
+	text-decoration: none;
+	padding: 0.6em 2em 0.6em 2em;
+	text-transform: uppercase;
+	-webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+	font-size: 0.9em;
+}
+
+.btn--pink {
+	background-color: var(--pink);
+	color: white;
+}
+
+.btn--pink:hover {
+	background-color: var(--white);
+	color: var(--pink);
+}
+
+.btn--pink--border {
+	background-color: var(--pink);
+	color: white;
+}
+
+.btn--pink--border:hover {
+    -webkit-box-shadow:inset 0px 0px 0px 2px var(--pink);
+    -moz-box-shadow:inset 0px 0px 0px 2px var(--pink);
+    box-shadow:inset 0px 0px 0px 2px var(--pink);
+	background-color: var(--white);
+	color: var(--pink);
+}
+
+.btn--green, .btn--green--border {
+	background-color: var(--green);
+	color: white;
+}
+
+.btn--green:hover {
+	background-color: var(--white);
+	color: var(--green);
+}
+
+.btn--green--border:hover {
+    -webkit-box-shadow:inset 0px 0px 0px 2px var(--green);
+    -moz-box-shadow:inset 0px 0px 0px 2px var(--green);
+    box-shadow:inset 0px 0px 0px 2px var(--green);
+	background-color: var(--white);
+	color: var(--green);
+}
+
+.btn--sm {
+	padding: 5px 10px 5px 10px;
+}
+
+
+/*********************************************/
+/* 		2.2 - LINKS  					     */
 /*********************************************/
 
 a, a:visited {
@@ -446,7 +509,10 @@ a, a:visited {
 
 .jumbotron {
 	height: 500px;
-	font-size: 1rem;
+}
+
+.jumbotron__text {
+	width: 80%;
 }
 
 .slide-overlay, .slide-overlay .content  {
@@ -469,7 +535,7 @@ a, a:visited {
 .jumbotron__date-time {
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
+	flex-direction: column;
 	margin-bottom: 30px;
 }
 
@@ -479,9 +545,7 @@ a, a:visited {
 	margin-bottom: 0;
 }
 
-.jumbotron__date-time h2:first-of-type {
-	margin-right: 30px;
-}
+
 
 /*****  JUMBOTRON CTA BUTTONS  ***************/
 
@@ -490,8 +554,13 @@ a, a:visited {
 	justify-content: center;
 	flex-direction: row;
 }
+
+.jumbotron__btn {
+	font-size: 0.8em;
+}
+
 .jumbotron___ctas a:first-of-type {
-	margin-right: 50px;
+	margin-right: 10px;
 }
 
 /*********************************************/
@@ -541,7 +610,6 @@ a, a:visited {
 	grid-gap: 15px;
 	align-items: center;
 	color: var(--white);
-	font-size: 23px;
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-weight: 700;
     padding: 20px 30px 20px 30px;
@@ -553,6 +621,7 @@ a, a:visited {
 }
 
 .date-venue__details p {
+	font-size: 23px;
 	margin: 0;
 }
 
@@ -801,8 +870,13 @@ a, a:visited {
 	background-position: bottom;
 }
 
+#section--newsletter .content {
+	flex-direction: column;
+}
+
 #newsletter__form input[type=email] {
 	min-width: 200px;
+	width: 80%;
 	max-width: 300px;
 	margin-bottom: 0;
 	margin-right: 10px;
@@ -996,65 +1070,6 @@ footer {
 /*											 */
 /*********************************************/
 
-/*********************************************/
-/* 		8.1 - BUTTONS 	 		           	 */
-/*********************************************/
-
-.btn {
-	border: none;
-	text-decoration: none;
-	padding: 10px 30px 10px 30px;
-	text-transform: uppercase;
-	-webkit-transition: all 0.4s ease-in;
-	-moz-transition: all 0.4s ease-in;
-	-o-transition: all 0.4s ease-in;
-	transition: all 0.4s ease-in;
-}
-
-.btn--pink {
-	background-color: var(--pink);
-	color: white;
-}
-
-.btn--pink:hover {
-	background-color: var(--white);
-	color: var(--pink);
-}
-
-.btn--pink--border {
-	background-color: var(--pink);
-	color: white;
-}
-
-.btn--pink--border:hover {
-    -webkit-box-shadow:inset 0px 0px 0px 2px var(--pink);
-    -moz-box-shadow:inset 0px 0px 0px 2px var(--pink);
-    box-shadow:inset 0px 0px 0px 2px var(--pink);
-	background-color: var(--white);
-	color: var(--pink);
-}
-
-.btn--green, .btn--green--border {
-	background-color: var(--green);
-	color: white;
-}
-
-.btn--green:hover {
-	background-color: var(--white);
-	color: var(--green);
-}
-
-.btn--green--border:hover {
-    -webkit-box-shadow:inset 0px 0px 0px 2px var(--green);
-    -moz-box-shadow:inset 0px 0px 0px 2px var(--green);
-    box-shadow:inset 0px 0px 0px 2px var(--green);
-	background-color: var(--white);
-	color: var(--green);
-}
-
-.btn--sm {
-	padding: 5px 10px 5px 10px;
-}
 
 /*********************************************/
 /* 		8.2 - FORMS  	 		           	 */
@@ -1062,17 +1077,16 @@ footer {
 
 #registration-form {
 	width: 100%;
-	display: table;
 }
 
-input[type="text"], input[type="email"] {
+#registration-form input[type="text"], input[type="email"] {
 	color: var(--sky-blue);
 	letter-spacing: 0.5px;
 	outline: none;
 	border: 1px solid var(--sky-blue);
 	padding: 10px;
 	margin-bottom: 10px;
-	width: 500px;
+	width: 100%;
 }
 ::placeholder {
 	color: var(--sky-blue);
@@ -1080,6 +1094,10 @@ input[type="text"], input[type="email"] {
 
 label {
 	display: block;
+}
+
+#registration-form input[type="submit"] {
+	width: 100%;
 }
 
 /*********************************************/
@@ -1223,11 +1241,35 @@ label {
 
 @media screen and (min-width: 800px) {
 
+	html {
+		font-size: 15px;
+	}
+
+	.section {
+		font-size: 1em;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
 	.two-column {
 		grid-template-columns: 50% 50%;
 		grid-template-areas: 
 			"left right";
 		grid-template-rows: auto;		
+	}
+
+	.jumbotron__text {
+		width: 80%;
+	}
+
+	.jumbotron__date-time {
+		flex-direction: row;
+	}
+
+	.jumbotron__date-time h2:first-of-type {
+		margin-right: 30px;
 	}
 
 	.call-for-papers__container {
@@ -1240,6 +1282,19 @@ label {
 	.papers-image {
 		max-width: 55%;
 		margin: auto;
+	}
+
+	#registration-form input[type="submit"] {
+		width: auto;
+	}
+
+	#section--newsletter {
+		align-items: center;
+	}
+
+	#section--newsletter .content {
+		flex-direction: row;
+		align-items: center;
 	}
 
 	#section--organisers {
@@ -1320,10 +1375,6 @@ label {
 		font-size: 0.9em;
 	}
 
-	h1 {
-		font-size: 1.3em;
-	}
-
 	/* Hide mobile navigation and show desktop navigation and sticky nav bar */
 	.mobile-nav {
 		display: none;
@@ -1343,6 +1394,14 @@ label {
 @media screen and (min-width: 1030px) {
 	.jumbotron {
 		font-size: 1rem;
+	}
+
+	#registration-form input[type="text"], input[type="email"] {
+		margin-bottom: 10px;
+		width: 400px;
+	}
+	#newsletter__form input[type=email] {
+		width: 400px;
 	}
 }
 
