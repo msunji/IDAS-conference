@@ -234,7 +234,7 @@ a, a:visited {
 	background: rgba(42, 66, 115, 0);
 	width: 100%;
    	padding-top: 20px;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
@@ -1246,7 +1246,8 @@ label {
 	}
 }
 
-@media screen and (max-width: 1030px) {
+
+@media screen and (min-width: 930px) {
 	.jumbotron {
 		font-size: 0.8rem;
 	}
@@ -1256,7 +1257,24 @@ label {
 	h1 {
 		font-size: 1.3em;
 	}
+
+	/* Hide mobile navigation and show desktop navigation and sticky nav bar */
+	.mobile-nav {
+		display: none;
+	}
+
+	.desktop-nav {
+		display: flex;
+	}
+
 }
+
+@media screen and (min-width: 1030px) {
+	.jumbotron {
+		font-size: 1rem;
+	}
+}
+
 /*------ About Taipei -----*/
 #about-taiwan {
 	background-color: var(--light-grey);
