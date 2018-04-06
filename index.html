@@ -31,7 +31,7 @@
 								<li><a class="nav__link" href="#section--date-venue">Date and Venue</a></li>
 								<li><a class="nav__link" href="#section--timeline">Important Dates</a></li>
 								<li><a class="nav__link" href="#section--organisers">Organizers</a></li>
-								<li><a class="nav__link" href="directions.html">Travel Info</a></li>
+								<li><a class="nav__link" href="travel-info.html">Travel Info</a></li>
 							</ul>
 						</li>
 						<li>
@@ -51,6 +51,14 @@
 			</nav>
 
 			<nav class="mobile-nav">
+				<div class="mobile__toggle">
+					<div class="nav-toggle-bar"></div>
+				</div>
+
+				<ul>
+					<li>test1</li>
+					<li>test2</li>
+				</ul>
 			</nav>
 		
 			<div class="content">
@@ -85,11 +93,11 @@
 	<!-- Brief into about event -->
 	<section class="section" id="section--intro">
 		<div class="content two-column align-center">
-			<div>
+			<div class="col--left">
 				<h1>Subtitle goes here</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
-			<div class="video-container">
+			<div class="video-container col--right">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/Fx25zsAbu5Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 		</div>
@@ -169,15 +177,15 @@
 
 	<!-- Call for Papers-->
 	<section class="section" id="section--call-for-papers">
-		<div class="content">
-			<div>
+		<div class="content call-for-papers__container">
+			<div class="call-for-papers__text">
 				<h1>Call for Papers and Abstracts</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<a class="btn btn--pink--border" href="">Submit your Paper</a>
 			</div>
-			<div>
-				<img class="call-papers-image" src="assets/img/call_for_papers.png" alt="IDAS 2018 Conference Call for Papers Picture" />
+			<div class="call-for-papers__img">
+				<img class="papers-image" src="assets/img/call_for_papers.png" alt="IDAS 2018 Conference Call for Papers Picture" />
 			</div>
 		</div>
 	</section>
@@ -308,7 +316,7 @@
 		</div>
 	</section>	
 
-	<!-- Sponsors List -->
+	<!-- Organisers -->
 	<section class="section" id="section--organisers">
 		<div class="image--holder">
 		</div>
@@ -343,7 +351,7 @@
 	
 	<!-- Footer -->
 	<footer class="section">
-		<div class="content white-text flex space-between">
+		<div class="footer__container content white-text flex space-between">
 			<div>
 				<h2>Contact Us</h2>
 				<p>If you have any questions or suggestions, please feel free to contact us at <a class="link--white" href="mailto:">email@email.com</a></p>
