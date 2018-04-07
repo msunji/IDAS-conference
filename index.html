@@ -52,12 +52,36 @@
 
 			<nav class="mobile-nav">
 				<div class="mobile__toggle">
-					<div class="nav-toggle-bar"></div>
+					<div class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
 				</div>
 
-				<ul>
-					<li>test1</li>
-					<li>test2</li>
+				<ul class="mobile-nav__links">
+					<li><a class="nav__link" href="#page-home">Home</a></li>
+					<li>
+						<a href="#" class="nav__link dropdown-switch"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown--mobile" id="about-dropdown">
+							<li><a class="nav__link" href="#section--date-venue">Date and Venue</a></li>
+							<li><a class="nav__link" href="#section--timeline">Important Dates</a></li>
+							<li><a class="nav__link" href="#section--organisers">Organizers</a></li>
+							<li><a class="nav__link" href="travel-info.html">Travel Info</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="nav__link dropdown-switch"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown--mobile" id="program-dropdown">
+							<li><a class="nav__link" href="panels.html">Panels</a></li>
+							<li><a class="nav__link" href="speakers.html">Speakers</a></li>
+							<li><a class="nav__link" href="schedule.html">Schedule</a></li>
+						</ul>
+					</li>
+					<li><a class="nav__link" href="#section--call-for-papers">Call for Abstract/Papers</a></li>
+					<li><a class="nav__link" href="#section--registration">Registration</a></li>
+					
+					<li><a class="nav__link" href="#section--contact">Contact</a></li>
 				</ul>
 			</nav>
 		
