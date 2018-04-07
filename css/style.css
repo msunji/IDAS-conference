@@ -784,12 +784,20 @@ a, a:visited {
 	background: var(--yellow-orange);
 	position: absolute;
 	width: 150%;
+	min-height: 64px;
 	right: -180%;
 	top: 0px;
 	padding: 10px;
 	text-align: center;
 	font-weight: 500;
     font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-event__desc p {
+	margin: 0;
 }
 
 .timeline-event__date {
@@ -1361,6 +1369,16 @@ label {
 
 	.timeline__container {
 		margin-left: 20%;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1220px) {
+	.timeline-event__desc {
+		height: 130%;
+	}
+	.timeline-event__desc p {
+		font-size: 0.9em;
+		line-height: 1.2em;
 	}
 }
 
