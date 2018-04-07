@@ -889,19 +889,24 @@ a, a:visited {
 .logos-list {
 	margin-top: 50px;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 50px;
+	justify-items: center;
+	align-items: center;
 }
 
-.logos-list div {
-	max-height: 200px;
-	margin-top: 40px;
-	margin: auto;
-}
-
-.logo {
+.logo--circle {
 	max-width: 80%;
 	max-height: inherit;
+}
+
+.logo--long {
+	max-width: 90%;
+	max-height: inherit;
+}
+
+.most-logo, .demo-logo {
+	grid-column: span 2;
 }
 
 /*********************************************/
@@ -1239,6 +1244,22 @@ label {
 /*											 */
 /*********************************************/
 
+@media screen and (min-width: 500px) {
+	
+	.logo--circle {
+		max-width: 50%;
+		max-height: inherit;
+	}
+
+	.logo--long {
+		max-width: 100%;
+		max-height: inherit;
+	}
+	.logo--long {
+		grid-column: span 1;
+	}
+}
+
 @media screen and (min-width: 800px) {
 
 	html {
@@ -1302,6 +1323,23 @@ label {
 		grid-template-areas: 
 			"organiser desc";
 		grid-template-rows: auto;
+	}
+
+	.logos-list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+
+	.logo--circle {
+		width: 100%;
+		max-width: 140px;
+		height: auto;
+	}
+
+	.logo--long {
+		max-width: 260px;
+		width: 100%;
+		grid-column: span 1;
 	}
 
 	.footer__container {
