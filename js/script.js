@@ -60,8 +60,9 @@ function mobileMenuHandler(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
-	console.log('test');
+	var mobileDropdown = mobileMenuSwitch.nextElementSibling;
 
+	mobileDropdown.classList.toggle('mobile--show');
 }
 
 // Dropdown Menu for Mobile 
