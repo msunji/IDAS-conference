@@ -496,6 +496,7 @@ a, a:visited {
 	margin-left: 20px;
 	margin-top: 20px;
 }
+
 .line {
 	display: block;
 	width: 30px;
@@ -505,7 +506,6 @@ a, a:visited {
 }
 
 .mobile-nav__links {
-
 	margin-left: 0;
 	margin-top: 20px;
 	padding-left: 0px;
@@ -553,7 +553,7 @@ a, a:visited {
 
 .dropdown--mobile {
 	list-style-type: none;
-	padding-left: 1.5em;
+	padding-left: 0.8em;
 	display: none;
 }
 
@@ -570,6 +570,10 @@ a, a:visited {
 
 .sticky--mobile {
 	background: var(--dark-blue);
+}
+
+.mobile--show {
+	display: block;
 }
 
 /*********************************************/

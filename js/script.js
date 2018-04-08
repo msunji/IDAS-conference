@@ -1,8 +1,12 @@
-const navLinks = document.querySelectorAll('.nav-link');
-const ctaLinks = document.querySelectorAll('.jumbotron__btn');
-const dropdownDesktop= document.querySelectorAll('.dropdown-switch');
-const dropDown = document.querySelectorAll('.dropdown--desktop');
+// Variables for Desktop dropdown
+const dropdownDesktopSwitch = document.querySelectorAll('.dropdown-switch');
+const dropdownDesktop = document.querySelectorAll('.dropdown--desktop');
 const carats = document.querySelectorAll('.down-carat');
+
+// Variables for Mobile dropdown
+const mobileMenuSwitch = document.querySelector('.mobile__toggle');
+const dropdownMobileSwitch = document.querySelectorAll('.dropdown--mobile__switch');
+
 const showHideButton = document.querySelector('.show-panels');
 const eventBox = document.querySelectorAll('.timeline__event');
 
@@ -25,7 +29,7 @@ function smoothScroll(e) {
 
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
-	dropdownDesktop.forEach(dropdown => {
+	dropdownDesktopSwitch.forEach(dropdown => {
 		var dropdownNext = dropdown.nextElementSibling;
 		var downCarat = dropdown.childNodes[1];
 
@@ -38,15 +42,39 @@ function hideMenuHandler(e) {
 
 // Dropdown Menu
 function dropdownHandlerDesktop(e) {
-	var dropdownNext = this.nextElementSibling;
-	var downCarat = this.childNodes[1];
 	e.stopPropagation();
 	e.preventDefault();
+
+	var dropdownNext = this.nextElementSibling;
+	var downCarat = this.childNodes[1];
+
 	dropdownNext.classList.toggle('show');
 	downCarat.classList.toggle('active');
 
 	// fire hide menu handler
 	hideMenuHandler(dropdownNext.id);
+}
+
+// Show mobile menu
+function mobileMenuHandler(e) {
+	e.stopPropagation();
+	e.preventDefault();
+
+	console.log('test');
+
+}
+
+// Dropdown Menu for Mobile 
+function dropdownHandlerMobile(e) {
+	e.stopPropagation();
+	e.preventDefault();
+
+	var mobileMenu = this.nextElementSibling;
+	var downCarat = this.childNodes[1];
+
+	mobileMenu.classList.toggle('mobile--show');
+	downCarat.classList.toggle('active');
+
 }
 
 // Sticky navbar
@@ -97,7 +125,9 @@ for (i = 0; i < acc.length; i++) {
 // navLinks.forEach(link => link.addEventListener('click', smoothScroll));
 // ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
 // showHideButton.addEventListener('click', showHideHandler);
-dropdownDesktop.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
+dropdownDesktopSwitch.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
+dropdownMobileSwitch.forEach(link => link.addEventListener('click', dropdownHandlerMobile));
+mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
 
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);
