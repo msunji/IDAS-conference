@@ -125,6 +125,10 @@ h2 {
 	font-size: 1.2em;
 }
 
+h3 { 
+	font-size: 1em;
+}
+
 .section {
     width: 100%;
     font-size: 1em;
@@ -1232,7 +1236,7 @@ label {
 .accordion__panel {
     overflow: hidden;
     height: auto;
-    max-height: 1000px;
+    max-height: 2000px;
     transition: max-height 0.3s ease-out;
 }
 
