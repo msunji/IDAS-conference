@@ -12,7 +12,7 @@ const mobileMenuSwitch = document.querySelector('.mobile__toggle');
 const dropdownMobileSwitch = document.querySelectorAll('.dropdown--mobile__switch');
 
 // All dropdowns
-const allDropdowns = document.querySelectorAll('.dropdown--trigger');
+const allDropDowns = document.querySelectorAll('.dropdown--trigger');
 
 const panelToggle = document.querySelector('.show-panels');
 const showHidePanels = document.querySelector('.panel--showall');
@@ -36,7 +36,7 @@ function smoothScroll(e) {
 
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
-	allDropdowns.forEach(dropdown => {
+	allDropDowns.forEach(dropdown => {
 		var dropdownNext = dropdown.nextElementSibling;
 		var downCarat = dropdown.childNodes[1];
 
@@ -47,6 +47,12 @@ function hideMenuHandler(e) {
 			hamburger.classList.remove('is-active');
 		} 
 	});
+
+
+	// if(mobileNavLinksList.classList[0] !== e || allDropDowns.id !== e) {
+	// 	mobileNavLinksList.classList.add('mobile-nav__closed');
+	// 	hamburger.classList.remove('is-active');		
+	// }
 
 }
 
