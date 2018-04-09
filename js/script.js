@@ -62,7 +62,7 @@ function mobileMenuHandler(e) {
 
 	var mobileDropdown = mobileMenuSwitch.nextElementSibling;
 
-	mobileDropdown.classList.toggle('mobile--show');
+	mobileDropdown.classList.toggle('mobile-nav__closed');
 }
 
 // Dropdown Menu for Mobile 
@@ -149,7 +149,7 @@ function showHideHandler(e) {
 
 dropdownDesktopSwitch.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 dropdownMobileSwitch.forEach(link => link.addEventListener('click', dropdownHandlerMobile));
-// mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
+mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
 showHidePanels.addEventListener('click', showHideHandler);
 
 window.addEventListener('click', hideMenuHandler);
