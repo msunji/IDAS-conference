@@ -76,10 +76,18 @@ function mobileMenuHandler(e) {
 
 }
 
+// Close mobile menu when you click on a link
 function mobileNavLinkHandler(e) {
 	var liChild = this.childNodes[0];
 
 	if(!liChild.classList.contains('dropdown--trigger')) {
+		mobileNavLinksList.classList.add('mobile-nav__closed');
+	}
+}
+
+// Close mobile menu when you scroll down the page
+function hideOnScroll(e) {
+	if(!mobileNavLinksList.classList.contains('mobile-nav__closed')) {
 		mobileNavLinksList.classList.add('mobile-nav__closed');
 	}
 }
@@ -177,4 +185,7 @@ mobileNavLinks.forEach(link => link.addEventListener('click', mobileNavLinkHandl
 // showHidePanels.addEventListener('click', showHideHandler);
 
 window.addEventListener('click', hideMenuHandler);
-window.addEventListener('scroll', stickyNavHandler);
+window.addEventListener('scroll', function() {
+	stickyNavHandler();
+	hideOnScroll();
+});
