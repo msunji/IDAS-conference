@@ -5,10 +5,15 @@ const carats = document.querySelectorAll('.down-carat');
 
 // Variables for Mobile nav 
 const mobileNav = document.querySelector('.mobile-nav');
+const mobileNavLinksList = document.querySelector('.mobile-nav__links');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav__links li');
 
 // Variables for Mobile dropdown
 const mobileMenuSwitch = document.querySelector('.mobile__toggle');
 const dropdownMobileSwitch = document.querySelectorAll('.dropdown--mobile__switch');
+
+// All dropdowns
+const allDropdowns = document.querySelectorAll('.dropdown--trigger');
 
 const panelToggle = document.querySelector('.show-panels');
 const showHidePanels = document.querySelector('.panel--showall');
@@ -32,15 +37,17 @@ function smoothScroll(e) {
 
 // Hide dropdown if you click on something else
 function hideMenuHandler(e) {
-	dropdownDesktopSwitch.forEach(dropdown => {
+	allDropdowns.forEach(dropdown => {
 		var dropdownNext = dropdown.nextElementSibling;
 		var downCarat = dropdown.childNodes[1];
 
 		if(dropdownNext.classList.contains('show') && dropdownNext.id !== e) {
 			dropdownNext.classList.remove('show');
 			downCarat.classList.remove('active');
+			mobileNavLinksList.classList.add('mobile-nav__closed');
 		} 
 	});
+
 }
 
 // Dropdown Menu
@@ -68,6 +75,14 @@ function mobileMenuHandler(e) {
 	mobileDropdown.classList.toggle('mobile-nav__closed');
 }
 
+function mobileNavLinkHandler(e) {
+	var liChild = this.childNodes[0];
+
+	if(!liChild.classList.contains('dropdown--trigger')) {
+		mobileNavLinksList.classList.add('mobile-nav__closed');
+	}
+}
+
 // Dropdown Menu for Mobile 
 function dropdownHandlerMobile(e) {
 	e.stopPropagation();
@@ -76,9 +91,10 @@ function dropdownHandlerMobile(e) {
 	var mobileMenu = this.nextElementSibling;
 	var downCarat = this.childNodes[1];
 
-	mobileMenu.classList.toggle('mobile--show');
+	mobileMenu.classList.toggle('show');
 	downCarat.classList.toggle('active');
 
+	hideMenuHandler(mobileMenu.id);
 }
 
 // Sticky navbar
@@ -86,6 +102,7 @@ function stickyNavHandler(e) {
 	const navbar = document.querySelector('.desktop-nav');
 	const navbarLogo = document.querySelector('.nav__logo');
 	const sticky = navbar.offsetTop;
+
 	if(window.pageYOffset > sticky) {
 		navbar.classList.add('sticky-nav');
 		navbarLogo.classList.add('sticky-logo');
@@ -96,10 +113,6 @@ function stickyNavHandler(e) {
 		navbarLogo.classList.remove('sticky-logo');
 		mobileNav.classList.remove('sticky--mobile');
 	}
-}
-
-function stickyMobileHandler(e) {
-
 }
 
 // Schedule Accordion
@@ -159,6 +172,7 @@ function showHideHandler(e) {
 dropdownDesktopSwitch.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 dropdownMobileSwitch.forEach(link => link.addEventListener('click', dropdownHandlerMobile));
 mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
+mobileNavLinks.forEach(link => link.addEventListener('click', mobileNavLinkHandler));
 // showHidePanels.addEventListener('click', showHideHandler);
 
 window.addEventListener('click', hideMenuHandler);

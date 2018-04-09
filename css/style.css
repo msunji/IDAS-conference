@@ -402,10 +402,6 @@ a, a:visited {
 	margin-left: 5px;
 }
 
-.show {
-	display: block;
-}
-
 .dropdown-menu::before {
     content: '';
     position: absolute;
@@ -588,7 +584,8 @@ a, a:visited {
 	z-index: 9999;	
 }
 
-.mobile--show {
+
+.show {
 	display: block;
 }
 
