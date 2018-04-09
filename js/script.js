@@ -4,6 +4,7 @@ const dropdownDesktop = document.querySelectorAll('.dropdown--desktop');
 const carats = document.querySelectorAll('.down-carat');
 
 // Variables for Mobile nav 
+const hamburger = document.querySelector('.hamburger');
 const mobileNav = document.querySelector('.mobile-nav');
 const mobileNavLinksList = document.querySelector('.mobile-nav__links');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav__links li');
@@ -43,6 +44,7 @@ function hideMenuHandler(e) {
 			dropdownNext.classList.remove('show');
 			downCarat.classList.remove('active');
 			mobileNavLinksList.classList.add('mobile-nav__closed');
+			hamburger.classList.remove('is-active');
 		} 
 	});
 
@@ -68,12 +70,10 @@ function mobileMenuHandler(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
-	var hamburger = document.querySelector('.hamburger');
 	var mobileDropdown = mobileMenuSwitch.nextElementSibling;
 
 	mobileDropdown.classList.toggle('mobile-nav__closed');
 	hamburger.classList.toggle('is-active');
-
 }
 
 // Close mobile menu when you click on a link
@@ -82,6 +82,7 @@ function mobileNavLinkHandler(e) {
 
 	if(!liChild.classList.contains('dropdown--trigger')) {
 		mobileNavLinksList.classList.add('mobile-nav__closed');
+		hamburger.classList.toggle('is-active');
 	}
 }
 
@@ -89,6 +90,7 @@ function mobileNavLinkHandler(e) {
 function hideOnScroll(e) {
 	if(!mobileNavLinksList.classList.contains('mobile-nav__closed')) {
 		mobileNavLinksList.classList.add('mobile-nav__closed');
+		hamburger.classList.remove('is-active');
 	}
 }
 
