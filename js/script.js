@@ -3,6 +3,9 @@ const dropdownDesktopSwitch = document.querySelectorAll('.dropdown-switch');
 const dropdownDesktop = document.querySelectorAll('.dropdown--desktop');
 const carats = document.querySelectorAll('.down-carat');
 
+// Variables for Mobile nav 
+const mobileNav = document.querySelector('.mobile-nav');
+
 // Variables for Mobile dropdown
 const mobileMenuSwitch = document.querySelector('.mobile__toggle');
 const dropdownMobileSwitch = document.querySelectorAll('.dropdown--mobile__switch');
@@ -86,11 +89,17 @@ function stickyNavHandler(e) {
 	if(window.pageYOffset > sticky) {
 		navbar.classList.add('sticky-nav');
 		navbarLogo.classList.add('sticky-logo');
+		mobileNav.classList.add('sticky--mobile');
 	}
 	else {
 		navbar.classList.remove('sticky-nav');
 		navbarLogo.classList.remove('sticky-logo');
+		mobileNav.classList.remove('sticky--mobile');
 	}
+}
+
+function stickyMobileHandler(e) {
+
 }
 
 // Schedule Accordion
@@ -150,7 +159,7 @@ function showHideHandler(e) {
 dropdownDesktopSwitch.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 dropdownMobileSwitch.forEach(link => link.addEventListener('click', dropdownHandlerMobile));
 mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
-showHidePanels.addEventListener('click', showHideHandler);
+// showHidePanels.addEventListener('click', showHideHandler);
 
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);

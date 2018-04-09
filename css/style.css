@@ -582,6 +582,10 @@ a, a:visited {
 
 .sticky--mobile {
 	background: var(--dark-blue);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;	
 }
 
 .mobile--show {
