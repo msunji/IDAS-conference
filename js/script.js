@@ -7,8 +7,6 @@ const carats = document.querySelectorAll('.down-carat');
 const mobileNav = document.querySelector('.mobile-nav');
 const mobileNavLinksList = document.querySelector('.mobile-nav__links');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav__links li');
-
-// Variables for Mobile dropdown
 const mobileMenuSwitch = document.querySelector('.mobile__toggle');
 const dropdownMobileSwitch = document.querySelectorAll('.dropdown--mobile__switch');
 
@@ -70,9 +68,12 @@ function mobileMenuHandler(e) {
 	e.stopPropagation();
 	e.preventDefault();
 
+	var hamburger = document.querySelector('.hamburger');
 	var mobileDropdown = mobileMenuSwitch.nextElementSibling;
 
 	mobileDropdown.classList.toggle('mobile-nav__closed');
+	hamburger.classList.toggle('is-active');
+
 }
 
 function mobileNavLinkHandler(e) {
