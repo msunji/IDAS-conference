@@ -24,15 +24,16 @@
 					<ul class="desktop-nav__links">
 						<li><a class="nav__link" href="index.html#page-home">Home</a></li>
 						<li>
-							<a href="#" class="nav__link dropdown-switch"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+							<a href="#" class="nav__link dropdown-switch dropdown--trigger"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 							<ul class="dropdown-menu dropdown--desktop" id="about-dropdown">
 								<li><a class="nav__link" href="index.html#section--date-venue">Date and Venue</a></li>
 								<li><a class="nav__link" href="index.html#section--timeline">Important Dates</a></li>
-								<li><a class="nav__link" href="#about-taiwan">About Taipei</a></li>
+								<li><a class="nav__link" href="index.html#section--organisers">Organizers</a></li>
+								<li><a class="nav__link" href="travel-info.html">Travel Info</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#" class="nav__link dropdown-switch"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+							<a href="#" class="nav__link dropdown-switch dropdown--trigger"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 							<ul class="dropdown-menu dropdown--desktop" id="program-dropdown">
 								<li><a class="nav__link" href="panels.html">Panels</a></li>
 								<li><a class="nav__link" href="speakers.html">Speakers</a></li>
@@ -48,6 +49,38 @@
 			</nav>
 
 			<nav class="mobile-nav">
+				<div class="mobile__toggle">
+					<div class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+				</div>
+
+				<ul class="mobile-nav__links mobile-nav__closed">
+					<li><a class="nav__link" href="#page-home">Home</a></li>
+					<li class="">
+						<a href="#" class="nav__link dropdown--mobile__switch dropdown--trigger"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown--mobile" id="about-dropdown">
+							<li><a class="nav__link" href="index.html#section--date-venue">Date and Venue</a></li>
+							<li><a class="nav__link" href="index.html#section--timeline">Important Dates</a></li>
+							<li><a class="nav__link" href="index.html#section--organisers">Organizers</a></li>
+							<li><a class="nav__link" href="travel-info.html">Travel Info</a></li>
+						</ul>
+					</li>
+					<li class="">
+						<a href="#" class="nav__link dropdown--mobile__switch dropdown--trigger"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown--mobile" id="program-dropdown">
+							<li><a class="nav__link" href="panels.html">Panels</a></li>
+							<li><a class="nav__link" href="speakers.html">Speakers</a></li>
+							<li><a class="nav__link" href="schedule.html">Schedule</a></li>
+						</ul>
+					</li>
+					<li><a class="nav__link" href="index.html#section--call-for-papers">Call for Abstract/Papers</a></li>
+					<li><a class="nav__link" href="index.html#section--registration">Registration</a></li>
+					
+					<li><a class="nav__link" href="index.html#section--contact">Contact</a></li>
+				</ul>
 			</nav>
 		
 			<div class="content">
