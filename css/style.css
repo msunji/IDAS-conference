@@ -1096,6 +1096,8 @@ a, a:visited {
 /*********************************************/
 
 .sched__table {
+	width: 95%;
+	margin: 2em auto 2em auto;
 	border-collapse: collapse;
 }
 
@@ -1126,11 +1128,6 @@ a, a:visited {
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 30px;
-}
-
-.sched__table {
-	width: 95%;
-	margin: 0 auto;
 }
 
 th {
@@ -1233,9 +1230,14 @@ label {
 }
 
 .accordion__panel {
+    overflow: hidden;
+    height: auto;
+    max-height: 1000px;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel--closed {
 	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
 }
 
 .panel--open {
@@ -1247,6 +1249,20 @@ label {
 
 .panel--hidden {
 	display: none;
+}
+
+.panel--showall {
+	border: 0;
+	padding: 0.5em;
+	font-weight: 700;
+	background-color: var(--dark-blue);
+	color: white;
+}
+
+.panel--showall:hover {
+	background: var(--white);
+	border: var(--sky-blue) 2px solid;
+	color: var(--sky-blue);
 }
 
 /*********************************************/

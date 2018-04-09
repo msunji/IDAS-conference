@@ -7,8 +7,8 @@ const carats = document.querySelectorAll('.down-carat');
 const mobileMenuSwitch = document.querySelector('.mobile__toggle');
 const dropdownMobileSwitch = document.querySelectorAll('.dropdown--mobile__switch');
 
-const showHideButton = document.querySelector('.show-panels');
-const eventBox = document.querySelectorAll('.timeline__event');
+const panelToggle = document.querySelector('.show-panels');
+const showHidePanels = document.querySelector('.panel--showall');
 
 
 // Slick Slider
@@ -101,34 +101,56 @@ for (i = 0; i < acc.length; i++) {
     var carat = this.childNodes[1];
     var panel = this.nextElementSibling;
 
-    if (panel.classList.contains('panel--open')) {
-      	panel.classList.remove('panel--open');
-      	panel.style.maxHeight = null;
+    if (panel.classList.contains('panel--closed')) {
+      	panel.classList.remove('panel--closed');
       	carat.classList.toggle("active");	
     } else {
-    	var panelHeight = panel.scrollHeight + 80;
-	    panel.style.maxHeight = panelHeight + "px";
-	    panel.classList.add('panel--open');
+	    panel.classList.add('panel--closed');
 	    carat.classList.toggle("active");
     } 
   });
 }
 
 // Show-Hide Panel Toggle
-// function showHideHandler(e) {
-// 	acc.forEach(button => {
-// 		var panel = button.nextElementSibling;
-// 		panel.classList.toggle('open-panel');
-// 	});
-// }
+function showHideHandler(e) {
+	var state = this.textContent;
+
+	if(state == 'Show All') {
+		acc.forEach((toggle, i) => {
+			var panel = toggle.nextElementSibling;
+			var carats = acc[i].childNodes[1];
+
+			if(panel.classList.contains('panel--closed')) {
+				panel.classList.remove('panel--closed');
+				showHidePanels.innerHTML = "Hide All";
+				carats.classList.add("active");
+			}
+		});
+	}
+	else if (state == "Hide All"){
+		acc.forEach((toggle, i) => {
+			var panel = toggle.nextElementSibling;
+			var carats = acc[i].childNodes[1];
+
+			if(!panel.classList.contains('panel--closed')) {
+				panel.classList.add('panel--closed');
+				showHidePanels.innerHTML = "Show All";
+				carats.classList.remove("active");
+			}
+		});
+	}
+
+}
+
 
 // Event Listeners
 // navLinks.forEach(link => link.addEventListener('click', smoothScroll));
 // ctaLinks.forEach(link => link.addEventListener('click', smoothScroll));
-// showHideButton.addEventListener('click', showHideHandler);
+
 dropdownDesktopSwitch.forEach(link => link.addEventListener('click', dropdownHandlerDesktop));
 dropdownMobileSwitch.forEach(link => link.addEventListener('click', dropdownHandlerMobile));
-mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
+// mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
+showHidePanels.addEventListener('click', showHideHandler);
 
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', stickyNavHandler);
