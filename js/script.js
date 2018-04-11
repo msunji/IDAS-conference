@@ -43,22 +43,13 @@ function hideMenuHandler(e) {
 		if (dropdownNext.classList.contains('show') && dropdownNext.id !== e) {
 			dropdownNext.classList.remove('show');
 			downCarat.classList.remove('active');
-			// mobileNavLinksList.classList.add('mobile-nav__closed');
-			// hamburger.classList.remove('is-active');
 		} 
 	});
 
-	var mobileDescendants = mobileNavLinksList.querySelectorAll('*');
-
-	console.log(mobileDescendants);
-	console.log(e);
-
-	mobileDescendants.forEach(descendant => {
-		if (descendant !== e.target.id) {
-			mobileNavLinksList.classList.add('mobile-nav__closed');
-			hamburger.classList.remove('is-active');				
-		}
-	}); 
+	if(mobileNavLinksList !== e.target.id) {
+		mobileNavLinksList.classList.add('mobile-nav__closed');
+		hamburger.classList.remove('is-active');				
+	}
 }
 
 // Dropdown Menu
