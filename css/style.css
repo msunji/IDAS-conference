@@ -293,6 +293,7 @@ a, a:visited {
 .col--right {
 	grid-area: right;
 }
+
 /*********************************************/
 /*											 */
 /* 		04 - NAVIGATION   		             */
@@ -1065,30 +1066,39 @@ a, a:visited {
 }
 
 #page--panels__grid {
-	display: flex;
-	flex-flow: row wrap;
-    justify-content: center;
+	padding-top: 40px;
+	width: 90%;
+	margin: auto;
 }
 
 .page--panels__info {
-	background: var(--white);
+	overflow: hidden;
+	display: grid;
+	background-color: var(--white);
 	height: auto;
-	flex-basis: 30%;
 	margin-bottom: 40px;
+	grid-template-areas:
+		"image"
+		"desc";
 }
 
-.page--panels__info:not(:nth-child(3n)) {
-	margin-right: 30px;
+.page--panels__img {
+	grid-area: image;
+}
+
+.page--panels__info {
+	grid-area: info;
 }
 
 .page--panels__img {
 	height: 250px;
 	width: 100%;
 	object-fit: cover;
+	background-color: var(--yellow-orange);
 }
 
-.page--panels__bio {
-	padding: 15px 40px 40px 40px;
+.page--panels__desc {
+		padding: 20px 30px 20px 30px;
 }
 
 /*********************************************/
@@ -1413,6 +1423,12 @@ label {
 	}
 }
 
+@media screen and (min-width: 700px) and (max-width: 850px) {
+	#page--panels__grid {
+		width: 70%;
+	}
+}
+
 @media screen and (min-width: 800px) {
 
 	html {
@@ -1499,6 +1515,11 @@ label {
 		grid-column: span 1;
 	}
 
+	#page--panels__grid {
+		width: 60%;
+		max-width: 560px;
+	}
+
 	.footer__container {
 		flex-direction: row;
 	}
@@ -1506,9 +1527,11 @@ label {
 }
 
 @media screen and (min-width: 1500px) {
+
 	.papers-image {
 		max-width: 50%;
 	}
+
 }
 
 /* Timeline Media Queries */
@@ -1522,9 +1545,11 @@ label {
 }
 
 @media screen and (min-width: 900px) and (max-width: 1220px) {
+
 	.timeline-event__desc {
 		height: 130%;
 	}
+
 	.timeline-event__desc p {
 		font-size: 0.9em;
 		line-height: 1.2em;
