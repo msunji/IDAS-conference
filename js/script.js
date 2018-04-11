@@ -54,16 +54,11 @@ function hideMenuHandler(e) {
 	console.log(e);
 
 	mobileDescendants.forEach(descendant => {
-		if (!mobileNavLinks && descendant !== e.target.id) {
+		if (descendant !== e.target.id) {
 			mobileNavLinksList.classList.add('mobile-nav__closed');
 			hamburger.classList.remove('is-active');				
 		}
 	}); 
-	// if(mobileNavLinksList.classList[0] !== e || allDropDowns.id !== e) {
-	// 	mobileNavLinksList.classList.add('mobile-nav__closed');
-	// 	hamburger.classList.remove('is-active');		
-	// }
-
 }
 
 // Dropdown Menu
