@@ -1446,6 +1446,10 @@ label {
 		margin-right: 30px;
 	}
 
+	.jumbotron__btn {
+		font-size: 0.9em;
+	}
+
 	.call-for-papers__container {
 		grid-template-columns: 1fr 40%;
 		grid-template-areas: 
