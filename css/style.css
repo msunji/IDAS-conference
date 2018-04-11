@@ -42,6 +42,7 @@
  **** 6.3a - Panels
  **** 6.3b - Speakers
  **** 6.3c - Schedule
+ **** 6.3d - Travel Info
 
  * 07 - FOOTER
 
@@ -1183,6 +1184,27 @@ th {
 
 .table__time {
 	width: 20%;
+}
+
+/*********************************************/
+/* 		6.3d - TRAVEL INFO  		  	     */
+/*********************************************/
+#page--travel-info {
+	background: var(--light-grey);
+}
+
+.two-col__content {
+	width: 80%;
+	margin: auto;
+}
+
+.col--img {
+	object-fit: contain;
+	height: 400px;
+}
+
+#page--nccu-directions {
+	height: 400px;
 }
 
 /*********************************************/
