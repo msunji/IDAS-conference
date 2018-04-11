@@ -148,33 +148,43 @@ for (i = 0; i < acc.length; i++) {
 
 // Show-Hide Panel Toggle
 function showHideHandler(e) {
-	var state = this.textContent;
 
-	if(state == 'Show All') {
-		acc.forEach((toggle, i) => {
-			var panel = toggle.nextElementSibling;
-			var carats = acc[i].childNodes[1];
+	const pageData = document.body.getAttribute('data-page');
 
-			if(panel.classList.contains('panel--closed')) {
-				panel.classList.remove('panel--closed');
-				showHidePanels.innerHTML = "Hide All";
-				carats.classList.add("active");
+	console.log(pageData);
+
+	if(pageData == 'conf-schedule') {
+		showHidePanels.addEventListener('click', function() {
+
+			var state = this.textContent;
+
+			if(state == 'Show All') {
+				acc.forEach((toggle, i) => {
+					var panel = toggle.nextElementSibling;
+					var carats = acc[i].childNodes[1];
+
+					if(panel.classList.contains('panel--closed')) {
+						panel.classList.remove('panel--closed');
+						showHidePanels.innerHTML = "Hide All";
+						carats.classList.add("active");
+					}
+				});
 			}
-		});
-	}
-	else if (state == "Hide All"){
-		acc.forEach((toggle, i) => {
-			var panel = toggle.nextElementSibling;
-			var carats = acc[i].childNodes[1];
+			else if (state == "Hide All"){
+				acc.forEach((toggle, i) => {
+					var panel = toggle.nextElementSibling;
+					var carats = acc[i].childNodes[1];
 
-			if(!panel.classList.contains('panel--closed')) {
-				panel.classList.add('panel--closed');
-				showHidePanels.innerHTML = "Show All";
-				carats.classList.remove("active");
-			}
+					if(!panel.classList.contains('panel--closed')) {
+						panel.classList.add('panel--closed');
+						showHidePanels.innerHTML = "Show All";
+						carats.classList.remove("active");
+					}
+				});
+			}			
 		});
+		
 	}
-
 }
 
 
@@ -186,7 +196,7 @@ dropdownDesktopSwitch.forEach(link => link.addEventListener('click', dropdownHan
 dropdownMobileSwitch.forEach(link => link.addEventListener('click', dropdownHandlerMobile));
 mobileMenuSwitch.addEventListener('click', mobileMenuHandler);
 mobileNavLinks.forEach(link => link.addEventListener('click', mobileNavLinkHandler));
-// showHidePanels.addEventListener('click', showHideHandler);
+document.addEventListener('DOMContentLoaded', showHideHandler, false);
 
 window.addEventListener('click', hideMenuHandler);
 window.addEventListener('scroll', function() {
