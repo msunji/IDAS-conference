@@ -21,32 +21,65 @@
 						<a href="index.html"><img class="nav__logo" src="assets/img/IDASLogoFull.png" alt="International Doctoral Program in Asia-Pacific Studies Logo"></a>
 					</div>
 					<ul class="desktop-nav__links">
-						<li><a class="nav__link" href="index.html#page-home">Home</a></li>
+						<li><a class="nav__link" href="index.html">Home</a></li>
 						<li>
-							<a href="#" class="nav__link dropdown-switch"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+							<a href="#" class="nav__link dropdown-switch dropdown--trigger"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 							<ul class="dropdown-menu dropdown--desktop" id="about-dropdown">
-								<li><a class="nav__link" href="index.html#section--date-venue">Date and Venue</a></li>
-								<li><a class="nav__link" href="index.html#section--timeline">Important Dates</a></li>
-								<li><a class="nav__link" href="travel-info.html">About Taipei</a></li>
+								<li><a class="nav__link" href="#section--date-venue">Date and Venue</a></li>
+								<li><a class="nav__link" href="#section--timeline">Important Dates</a></li>
+								<li><a class="nav__link" href="#section--organisers">Organizers</a></li>
+								<li><a class="nav__link" href="travel-info.html">Travel Info</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#" class="nav__link dropdown-switch"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+							<a href="#" class="nav__link dropdown-switch dropdown--trigger"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
 							<ul class="dropdown-menu dropdown--desktop" id="program-dropdown">
 								<li><a class="nav__link" href="panels.html">Panels</a></li>
 								<li><a class="nav__link" href="speakers.html">Speakers</a></li>
 								<li><a class="nav__link" href="schedule.html">Schedule</a></li>
 							</ul>
 						</li>
-						<li><a class="nav__link" href="index.html#section--call-for-papers">Call for Abstract/Papers</a></li>
-						<li><a class="nav__link" href="index.html#section--registration">Registration</a></li>
+						<li><a class="nav__link" href="#section--call-for-papers">Call for Abstract/Papers</a></li>
+						<li><a class="nav__link" href="#section--registration">Registration</a></li>
 						
-						<li><a class="nav__link" href="index.html#section--contact">Contact</a></li>
+						<li><a class="nav__link" href="#section--contact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
 
 			<nav class="mobile-nav">
+				<div class="mobile__toggle">
+					<div class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+				</div>
+
+				<ul class="mobile-nav__links mobile-nav__closed">
+					<li><a class="nav__link" href="index.html#page-home">Home</a></li>
+					<li class="">
+						<a href="#" class="nav__link dropdown--mobile__switch dropdown--trigger"><span>About</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown--mobile" id="about-dropdown">
+							<li><a class="nav__link" href="index.html#section--date-venue">Date and Venue</a></li>
+							<li><a class="nav__link" href="index.html#section--timeline">Important Dates</a></li>
+							<li><a class="nav__link" href="index.html#section--organisers">Organizers</a></li>
+							<li><a class="nav__link" href="travel-info.html">Travel Info</a></li>
+						</ul>
+					</li>
+					<li class="">
+						<a href="#" class="nav__link dropdown--mobile__switch dropdown--trigger"><span>Program</span><i class="fa fa-angle-down down-carat" aria-hidden="true"></i></a>
+						<ul class="dropdown--mobile" id="program-dropdown">
+							<li><a class="nav__link" href="panels.html">Panels</a></li>
+							<li><a class="nav__link" href="speakers.html">Speakers</a></li>
+							<li><a class="nav__link" href="schedule.html">Schedule</a></li>
+						</ul>
+					</li>
+					<li><a class="nav__link" href="index.html#section--call-for-papers">Call for Abstract/Papers</a></li>
+					<li><a class="nav__link" href="index.html#section--registration">Registration</a></li>
+					
+					<li><a class="nav__link" href="index.html#section--contact">Contact</a></li>
+				</ul>
 			</nav>
 		
 			<div class="content">
@@ -81,14 +114,14 @@
 	<section class="section" id="page--travel-info">
 		<div class="content">
 			<div>
-				<h1>About Taiwan</h1>
+				<h1>Travel Information</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="section two-column two-col__content align-center" id="page--nccu-directions">
-			<div class="col--left ">
+	<section class="section two-column two-col__content align-center" id="travel-info-directions">
+			<div class="col--left">
 				<h1>Getting to NCCU</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
@@ -98,15 +131,48 @@
 			</div>
 
 	</section>
+
+	<section class="section" id="travel-info-accommodation">
+		<div class="content">
+			<div>
+				<h1>Accommodations</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="travel-info-taiwan">
+		<div class="content">
+			<div>
+				<h1>About Taiwan</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="travel-info-taiwan--img">
+		<img class="taiwan__img" src="assets/img/taiwan1.jpeg">
+		<img class="taiwan__img" src="assets/img/taiwan2.jpeg">
+		<img class="taiwan__img" src="assets/img/taiwan3.jpeg">
+		<img class="taiwan__img" src="assets/img/taiwan4.jpeg">
+		<img class="taiwan__img" src="assets/img/taiwan5.jpeg">
+		<img class="taiwan__img" src="assets/img/taipei6.jpeg">
+	</section>
 	
 	<!-- Footer -->
 	<footer class="section">
-		<div class="footer-wrapper content white-text">
+		<div class="footer__container content white-text flex space-between">
 			<div>
-				<h1>Related Links</h1>
-				NCCU LOGO Goes Here
-				IDAS LOGO goes here
-				Social Science college logo goes here
+				<h2>Contact Us</h2>
+				<p>If you have any questions or suggestions, please feel free to contact us at <a class="link--white" href="mailto:">email@email.com</a></p>
+			</div>
+			<div class="footer__logos">
+				<h2>Related Links</h2>
+				<div class="footer__logos__container">
+					<img src="assets/img/nccu-logo-sm.png" alt="National Chengchi University">
+					<img src="assets/img/idas-logo-sm.png" alt="International Doctorate Program in Asia-Pacific Studies, NCCU">
+					<img src="assets/img/temp-css-logo.png" alt="International Doctorate Program in Asia-Pacific Studies, NCCU">
+				</div>
 			</div>
 		</div>
 	</footer>

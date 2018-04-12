@@ -1203,8 +1203,28 @@ th {
 	height: 400px;
 }
 
-#page--nccu-directions {
+#travel-info-directions {
 	height: 400px;
+}
+
+#travel-info-accommodation {
+	color: var(--white);
+	background: var(--dark-grey);
+}
+
+#travel-info-taiwan {
+}
+
+#travel-info-taiwan--img {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 33.33%);
+	grid-template-rows: 200px 200px;
+}
+
+.taiwan__img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
 }
 
 /*********************************************/
@@ -1661,7 +1681,7 @@ label {
 }
 
 /*------ About Taipei -----*/
-#about-taiwan {
+/*#about-taiwan {
 	background-color: var(--light-grey);
 }
 .taiwan-photo-grid {
@@ -1697,5 +1717,5 @@ label {
 	height: 300px;
 	background: url('../assets/img/taipei6.jpeg');
 	background-size: cover;
-}
+}*/
 
