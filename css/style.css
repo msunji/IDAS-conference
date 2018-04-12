@@ -1214,12 +1214,8 @@ th {
 	background: var(--dark-grey);
 }
 
-.hotel-container {
-	width: 80%;
-	margin: auto;
-}
-
 .hotel__container {
+	padding-top: 0px;
 	background: var(--dark-grey);
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
@@ -1230,8 +1226,12 @@ th {
 .hotel {
 	width: 100%;
 	display: grid;
-	grid-template-rows: 150px 1fr;
+	grid-template-rows: 200px 1fr;
 	background: white;
+}
+
+.hotel__img {
+	background: var(--yellow-orange);
 }
 
 .hotel__desc {
