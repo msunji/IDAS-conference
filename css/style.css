@@ -782,7 +782,7 @@ a, a:visited {
 .section--speakers__grid {
 	display: grid;
 	max-width: 1000px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 390px));
 	grid-template-rows: repeat(2, minmax(200px, 1fr));
 	grid-gap: 15px;
 	margin: 40px auto 0 auto;
