@@ -1294,6 +1294,13 @@ footer {
 	color: var(--sky-blue);
 }
 
+input:focus::-webkit-input-placeholder { 
+	color: transparent; 
+}
+input:focus:-moz-placeholder { 
+	color: transparent; 
+}
+
 label {
 	display: block;
 }
