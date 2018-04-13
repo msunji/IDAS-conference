@@ -1058,47 +1058,33 @@ a, a:visited {
 /*********************************************/
 
 #page--panels {
-	background: white;
+	background: var(--light-grey);
 }
 
 #page--panels__container {
 	background: var(--light-grey);
 }
 
-#page--panels__grid {
-	padding-top: 40px;
-	width: 90%;
-	margin: auto;
-}
-
-.page--panels__info {
-	overflow: hidden;
+.panel__col {
+	background: white;
 	display: grid;
-	background-color: white;
-	height: auto;
-	margin-bottom: 40px;
 	grid-template-areas:
-		"image"
-		"desc";
+		"left"
+		"right" ;
 }
 
-.page--panels__img {
-	grid-area: image;
-}
-
-.page--panels__info {
-	grid-area: info;
-}
-
-.page--panels__img {
-	height: 250px;
+.panel__img {
 	width: 100%;
-	object-fit: cover;
-	background-color: var(--yellow-orange);
+	height: 250px;
+	background: var(--yellow-orange);
 }
 
-.page--panels__desc {
-		padding: 20px 30px 20px 30px;
+.panel--even {
+	background: var(--light-grey);
+}
+
+.panel--even > .panel__img {
+	background: #efad0a;
 }
 
 /*********************************************/
@@ -1488,12 +1474,6 @@ label {
 	}
 }
 
-@media screen and (min-width: 700px) and (max-width: 850px) {
-	#page--panels__grid {
-		width: 70%;
-	}
-}
-
 @media screen and (min-width: 800px) {
 
 	html {
@@ -1567,7 +1547,6 @@ label {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-
 	.logo--circle {
 		width: 100%;
 		max-width: 140px;
@@ -1580,9 +1559,14 @@ label {
 		grid-column: span 1;
 	}
 
-	#page--panels__grid {
-		width: 60%;
-		max-width: 560px;
+	.panel__col {
+		grid-template-areas: 
+			"left right";
+		grid-template-columns: 45% auto;
+	}
+
+	.panel__img {
+		height: 100%;
 	}
 
 	.footer__container {
