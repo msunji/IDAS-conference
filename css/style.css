@@ -1594,10 +1594,17 @@ label {
 /* Timeline Media Queries */
 /* Add left margin only on smaller screens */
 
-@media screen and (min-width: 460px) and (max-width: 900px) {
+@media screen and (min-width: 460px) and (max-width: 640px) {
 
 	.timeline__container {
 		margin-left: 20%;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 899px) {
+
+	.timeline__container {
+		margin-left: 30%;
 	}
 }
 
