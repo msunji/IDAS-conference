@@ -916,7 +916,7 @@ a, a:visited {
 	width: 150%;
 	min-height: 64px;
 	right: -180%;
-	top: 0px;
+	top: 9px;
 	padding: 10px;
 	text-align: center;
 	font-weight: 500;
@@ -1129,7 +1129,7 @@ a, a:visited {
 /*********************************************/
 
 .sched__table {
-	width: 95%;
+	width: 98%;
 	margin: 2em auto 2em auto;
 	border-collapse: collapse;
 }
@@ -1140,6 +1140,8 @@ a, a:visited {
 
 .sched__table td {
 	border-bottom: 1px solid slategrey;
+    font-size: 0.95em;
+    line-height: 1.5em;
 }
 
 .table__headers {
@@ -1541,6 +1543,12 @@ label {
 		grid-template-areas: 
 			"organiser desc";
 		grid-template-rows: auto;
+	}
+
+	.sched__table td {
+		border-bottom: 1px solid slategrey;
+	    font-size: 1em;
+	    line-height: 1.75em;
 	}
 
 	.logos-list {
